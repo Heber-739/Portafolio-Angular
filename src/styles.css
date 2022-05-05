@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Montserrat&display=swap");
+
+:root {
+  --color1: #3c40a4;
+  --color2: #4d68f0;
+  --color3: #8697fe;
+  --color4: #003567;
+  --color5: #119e99;
+}
+* {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: calc(0.5rem + 1.2vw);
+  text-indent: 10px;
+  text-align: justify;
+}
+body {
+  background: linear-gradient(
+    45deg,
+    var(--color3),
+    var(--color2),
+    var(--color1)
+  );
+  background-repeat: no-repeat;
+  height: 100%;
+  color: white;
+  font-family: "montserrat", sans-serif;
+}
+.box {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+.container {
+  height: fit-content;
+  width: 95vw;
+  background: var(--color4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+.container p {
+  padding: 0 0 8px;
+  font-size: calc(0.5rem + 1.2vw);
+}

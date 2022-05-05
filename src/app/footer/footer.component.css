@@ -1,0 +1,31 @@
+footer {
+  width: 100vw;
+  margin-top: 20px;
+  height: fit-content;
+  background: var(--color4);
+  color: white;
+}
+.foot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.foot a {
+  text-align: left;
+  color: white;
+  text-decoration: underline;
+}
+
+.foot p {
+  font-size: calc(0.4rem + 1.1vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px;
+  box-sizing: border-box;
+}
+
+.git {
+  background: white;
+  border-radius: 50%;
+}

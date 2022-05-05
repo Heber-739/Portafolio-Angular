@@ -1,0 +1,33 @@
+<nav>
+  <ul class="lista">
+    <li class="item">
+      <a [routerLink]="['']" class="a_item"
+        ><img class="img" src="assets/img/home.svg" />Presentacion</a
+      >
+    </li>
+    <li class="item">
+      <a [routerLink]="['/lenguajes']" class="a_item"
+        ><img class="img" src="assets/img/lenguajes.svg" />Lenguajes</a
+      >
+    </li>
+    <li class="item">
+      <a [routerLink]="['/proyectos']" class="a_item"
+        ><img class="img" src="assets/img/proyectos.svg" />Proyectos</a
+      >
+    </li>
+    <li class="item">
+      <a [routerLink]="['/contacto']" class="a_item"
+        ><img class="img" src="assets/img/contacto.svg" />Contacto</a
+      >
+    </li>
+    <li class="item" (click)="cambiarTema(5, caja)">
+      <a class="a_item"><img class="img" src="assets/img/temas.svg" />Temas</a>
+    </li>
+  </ul>
+</nav>
+<div class="box box_temas" #caja>
+  <div class="tema_default box" (click)="cambiarTema(1, caja)"></div>
+  <div class="tema_rojo box" (click)="cambiarTema(2, caja)"></div>
+  <div class="tema_verde box" (click)="cambiarTema(3, caja)"></div>
+  <div class="tema_gris box" (click)="cambiarTema(4, caja)"></div>
+</div>
