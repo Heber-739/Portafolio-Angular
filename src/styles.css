@@ -50,3 +50,35 @@ body {
   padding: 0 0 8px;
   font-size: calc(0.5rem + 1.2vw);
 }
+.input_text {
+  width: 90%;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  border: 2px solid var(--color5);
+}
+.input_text:focus {
+  outline: 2px solid var(--color5);
+}
+.input_text::placeholder {
+  font-size: calc(0.2em + 2vw);
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.btn {
+  color: white;
+  font-size: calc(0.4rem + 2vw);
+  font-weight: bold;
+  background: var(--color5);
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px black;
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px 5px 1px black;
+}

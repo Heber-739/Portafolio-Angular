@@ -1,1 +1,54 @@
-<p>encriptador works!</p>
+<header class="container box">
+  <h2 class="titulo">Encriptador de texto</h2>
+  <p class="aclaracion">
+    Solo minusculas sin acento, sin números ni caracteres especiales.
+  </p>
+</header>
+<section>
+  <form action="" class="form">
+    <small *ngIf="textControl.invalid && textControl.dirty"
+      ><p *ngIf="textControl.hasError('required')">Campo Obligatorio</p>
+      <p *ngIf="textControl.hasError('pattern')">Texto invalido</p></small
+    >
+    <textarea
+      class="input_text"
+      [formControl]="textControl"
+      placeholder="Ingrese el texto a encriptar o desencriptar aquí."
+    ></textarea>
+    <button
+      type="submit"
+      class="btn"
+      [disabled]="textControl.invalid"
+      (click)="encriptar($event)"
+    >
+      Encriptar
+    </button>
+    <button
+      type="button"
+      class="btn"
+      [disabled]="textControl.invalid"
+      (click)="desencriptar($event)"
+    >
+      Desencriptar
+    </button>
+  </form>
+  <p *ngIf="showMessage" class="popup box">Copiado con éxito!</p>
+  <form action="" class="form">
+    <textarea
+      [formControl]="textTwoControl"
+      #copiarTexto
+      type="text"
+      class="input_text"
+      placeholder="Recibirá el texto encriptado o desencriptado aquí."
+    ></textarea>
+    <button
+      type="button"
+      class="btn"
+      [ngxClipboard]="copiarTexto"
+      [disabled]="textTwoControl.invalid"
+      (click)="mostrarPopup($event)"
+    >
+      Copiar al portapapeles
+    </button>
+  </form>
+</section>

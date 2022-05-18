@@ -1,4 +1,4 @@
-<section class="proyectos">
+<section class="proyectos" [@animar]="estadoAnimacion">
   <div class="box container">
     <p>Aquí estan los proyectos finalizados que desarrollé hasta el momento:</p>
     <p>
@@ -22,38 +22,22 @@
   </div>
 
   <div class="contenedor">
-    <div class="card box">
+    <div class="card box" (click)="redirigir('encriptador')">
       <p class="titulo">Encriptador</p>
-      <p>Click me</p>
-      <iframe
-        class="iframe"
-        src="https://heber-739.github.io/Alura-Challenge-Encriptador-de-texto/"
-      ></iframe>
+      <p #titulo>Click me</p>
     </div>
 
-    <div class="card box">
+    <div class="card box" (click)="redirigir('ahorcado')">
       <p class="titulo">Ahorcado</p>
-      <p>Click me</p>
-      <iframe
-        class="iframe"
-        src="https://heber-739.github.io/Challenge-2-Juego-del-Ahorcado/"
-      ></iframe>
+      <p #titulo>Click me</p>
     </div>
-    <div class="card box">
+    <div class="card box" (click)="redirigir('chohan')">
       <p class="titulo">Cho - Han</p>
-      <p>Click me</p>
-      <iframe
-        class="iframe"
-        src="https://heber-739.github.io/Juego-Cho-Han/"
-      ></iframe>
+      <p #titulo>Click me</p>
     </div>
-    <div class="card box">
+    <div class="card box" (click)="redirigir('ecommerce')">
       <p class="titulo">e-commerce</p>
-      <p>Click me</p>
-      <iframe
-        class="iframe"
-        src="https://heber-739.github.io/e-commerce"
-      ></iframe>
+      <p #titulo>Click me</p>
     </div>
   </div>
 </section>

@@ -35,18 +35,7 @@ label[for="name"] {
 label[for="message"] {
   grid-area: d;
 }
-.text {
-  width: 90%;
-  background-color: white;
-  color: black;
-  padding: 5px;
-  border-radius: 5px;
-  border-style: none;
-  border: 2px solid var(--color5);
-}
-.text:focus {
-  outline: 2px solid var(--color5);
-}
+
 .name {
   height: 50%;
   grid-area: b;
@@ -58,21 +47,10 @@ label[for="message"] {
 .email {
   opacity: 0;
 }
-.text::placeholder {
-  font-size: calc(0.2em + 2vw);
-  width: 100%;
-  padding: 5px 10px;
-  text-align: center;
-  box-sizing: border-box;
-}
-.enviar {
+.btn {
   width: 85%;
-  color: white;
-  font-weight: bold;
-  background: var(--color5);
-  padding: 10px 2px;
-  border-radius: 5px;
   grid-area: c;
+  padding: 10px 2px;
 }
 
 .formulario {
