@@ -1,1 +1,93 @@
-<p>chohan works!</p>
+<main class="body">
+  <div class="saldo box container">
+    <p>Saldo:</p>
+    <p>Apuesta:</p>
+  </div>
+  <div class="resultado box container">
+    <p>Resultado:</p>
+    <p>Paridad:</p>
+  </div>
+  <h1 class="box container titulo">Comienza el Juego</h1>
+  <section class="section1">
+    <div class="presentacion box container">
+      <form class="form form_nombre" onsubmit="return false">
+        <input
+          type="text"
+          placeholder="¿Cuál es tu nombre?"
+          class="input_text input"
+          autocomplete="off"
+        />
+        <input
+          type="number"
+          placeholder="Shibas a apostar"
+          class="input_text input"
+          min="1"
+          autocomplete="off"
+        />
+        <button class="btn">Start!</button>
+      </form>
+      <p class="bienvenida"></p>
+      <p class="mensajes"></p>
+      <div class="continuar">
+        <p class="continue">¿Desea continuar?</p>
+        <button class="btn si_cont">Si</button>
+        <button class="btn no_cont">No</button>
+      </div>
+      <p class="despedida"></p>
+    </div>
+    <div class="apuestas box container">
+      <form class="form_apuestas" onsubmit="return false">
+        <input
+          type="number"
+          placeholder="¿Cuánto apostará?"
+          class="input_text apuesta"
+          autocomplete="off"
+          disabled
+        />
+        <button class="btn">Par</button>
+        <button class="btn">Impar</button>
+      </form>
+    </div>
+
+    <div class="container_dados container box">
+      <div class="cont_dados box">
+        <!-- -------------Dado1--------------- -->
+        <div class="dado1 cara1">
+          <div id="valor1_1" class="cir1 circulo1"></div>
+          <div id="valor2_1" class="cir1 circulo2"></div>
+          <div id="valor3_1" class="cir1 circulo3"></div>
+          <div id="valor4_1" class="cir1 circulo4"></div>
+          <div id="valor5_1" class="cir1 circulo5"></div>
+          <div id="valor6_1" class="cir1 circulo6"></div>
+          <div id="valor7_1" class="cir1 circulo7"></div>
+        </div>
+
+        <!-- -------------Dado2--------------- -->
+      </div>
+      <div class="cont_dados box">
+        <div class="dado2 cara2">
+          <div id="valor1_2" class="cir2 circulo1"></div>
+          <div id="valor2_2" class="cir2 circulo2"></div>
+          <div id="valor3_2" class="cir2 circulo3"></div>
+          <div id="valor4_2" class="cir2 circulo4"></div>
+          <div id="valor5_2" class="cir2 circulo5"></div>
+          <div id="valor6_2" class="cir2 circulo6"></div>
+          <div id="valor7_2" class="cir2 circulo7"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="ultimos_resultados box container">
+    <table class="tabla">
+      <thead class="titulos">
+        <tr>
+          <th class="titulo_col">N°</th>
+          <th class="titulo_col">Apuesta</th>
+          <th class="titulo_col">Resultado</th>
+          <th class="titulo_col">Billetera</th>
+        </tr>
+      </thead>
+      <tbody class="cuerpo_tabla"></tbody>
+    </table>
+  </div>
+</main>

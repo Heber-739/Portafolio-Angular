@@ -1,1 +1,53 @@
-<p>ahorcado works!</p>
+<main>
+  <header class="container box">
+    <h2>Juego del ahorcado</h2>
+    <p>No se admiten números ni caracteres especiales</p>
+  </header>
+  <p *ngIf="palabraAgregada" class="popup box">Palabra agregada!</p>
+
+  <form class="form" *ngIf="visible">
+    <small *ngIf="inputControl.invalid && inputControl.dirty">
+      Texto invalido</small
+    >
+    <input
+      [formControl]="inputControl"
+      type="text"
+      placeholder="Escriba una nueva palabra"
+      class="input_text"
+    />
+    <button
+      class="btn"
+      type="button"
+      [disabled]="inputControl.invalid"
+      (click)="agregarPalabra()"
+    >
+      AGREGAR
+    </button>
+    <button type="button" class="btn" (click)="start()">INICIAR</button>
+  </form>
+  <section
+    class="section2"
+    [ngStyle]="{ display: visible === false ? 'flex' : 'none' }"
+  >
+    <div>
+      <canvas class="ahorcado" width="300" height="400" #canvasRef></canvas>
+    </div>
+    <div class="container box input_box">
+      <input
+        type="text"
+        class="input input_text"
+        placeholder="Letras"
+        [formControl]="inputTwoControl"
+      />
+      <button
+        type="button"
+        class="btn"
+        (click)="probar()"
+        [disabled]="inputTwoControl.invalid"
+      >
+        Probar
+      </button>
+      <button type="button" class="btn" (click)="reload()">Reset</button>
+    </div>
+  </section>
+</main>

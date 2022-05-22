@@ -30,20 +30,3 @@ section {
 .ng-dirty.ng-invalid {
   outline: 2px solid red;
 }
-.popup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
-  padding: 15px;
-  background: var(--color4);
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  border: 1px solid var(--color5);
-  z-index: 10;
-}
