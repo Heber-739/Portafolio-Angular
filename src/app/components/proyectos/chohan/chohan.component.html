@@ -10,21 +10,22 @@
   <h1 class="box container titulo">Comienza el Juego</h1>
   <section class="section1">
     <div class="presentacion box container">
-      <form class="form form_nombre" onsubmit="return false">
+      <form class="form form_nombre" [formGroup]="initForm">
         <input
           type="text"
           placeholder="¿Cuál es tu nombre?"
           class="input_text input"
           autocomplete="off"
+          formControlName="nombre"
         />
         <input
           type="number"
           placeholder="Shibas a apostar"
           class="input_text input"
-          min="1"
           autocomplete="off"
+          formControlName="apuesta"
         />
-        <button class="btn">Start!</button>
+        <button type="submit" class="btn">Start!</button>
       </form>
       <p class="bienvenida"></p>
       <p class="mensajes"></p>
