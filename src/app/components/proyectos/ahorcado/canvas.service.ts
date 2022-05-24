@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class CanvasService {
   cx: CanvasRenderingContext2D;
   palabras: string[] = [
@@ -88,7 +86,7 @@ export class CanvasService {
   evaluarLetra(letra: string) {
     if (this.finalizado) {
       this.cx.clearRect(0, 182, 320, 100);
-      this.registroPalabras();
+
       if (!this.letrasIngresadas.includes(letra)) {
         this.letrasIngresadas.push(letra);
         if (this.palabra.includes(letra)) {
@@ -120,6 +118,7 @@ export class CanvasService {
         this.letraRepetida();
       }
     }
+    this.registroPalabras();
   }
 
   letraRepetida() {
@@ -185,7 +184,7 @@ export class CanvasService {
     } else {
       this.cx.fillStyle = 'red';
       this.cx.fillText('Usted Perdió', 160, 320);
-      this.cx.clearRect(0, 360, 320, 400);
+      this.cx.clearRect(0, 320, 320, 400);
       this.cx.fillText('La Palabra era:', 160, 350);
       this.cx.font = `bold 30px montserrat`;
       this.cx.fillText(this.palabra, 160, 395);

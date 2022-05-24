@@ -40,7 +40,7 @@ export class ProyectosComponent implements OnInit {
   redirigir(valor: String) {
     this.estadoAnimacion = this.estadoAnimacion === 'start' ? 'end' : 'start';
     setTimeout(() => {
-      this.router.navigate([`proyectos/${valor}`]);
+      this.router.navigate(['proyectos', valor]);
     }, 2001);
   }
 }

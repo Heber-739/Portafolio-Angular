@@ -5,11 +5,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import { FooterComponent } from './footer/footer.component';
-import { RoutingModule } from './routing.module';
+import { RoutingAppModule } from './routing-app.module';
 
 @NgModule({
   declarations: [AppComponent, NavegacionComponent, FooterComponent],
-  imports: [BrowserModule, RoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, RoutingAppModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

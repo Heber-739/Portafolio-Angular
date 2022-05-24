@@ -54,7 +54,6 @@ main {
   align-items: center;
   margin: 20px auto 0px;
   width: 98vw;
-  overflow: hidden;
 }
 .ahorcado {
   border: 5px solid var(--color5);
