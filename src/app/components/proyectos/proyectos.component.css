@@ -5,36 +5,34 @@
 }
 
 .container p {
-  text-align: justify;
   font-size: calc(0.1em + 1.3vh);
-  line-height: 1.2em;
   padding: 3px 10px;
 }
 
-/* ------------ Iframes --------------- */
 .contenedor {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 90vw;
   height: fit-content;
-  justify-content: center;
-  text-align: center;
+  margin: 0 auto;
+  justify-content: space-around;
 }
 .card {
-  width: 45vw;
-  padding: 10px;
-  text-align: center;
-  margin: 5px;
+  width: 40%;
+  height: 25vh;
+  padding: 10px 0px;
+  margin: 5px auto;
   background: var(--color5);
-  box-sizing: border-box;
-  height: fit-content;
+  cursor: pointer;
 }
 
 .card p {
-  text-align: center;
+  width: fit-content;
+  margin: 10px auto 20px;
+  text-align: left;
 }
 .titulo {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 5px 0 15px;
 }

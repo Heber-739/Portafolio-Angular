@@ -23,6 +23,20 @@ const appRouts: Routes = [
         (m) => m.AhorcadoModule
       ),
   },
+  {
+    path: 'proyectos/chohan',
+    loadChildren: () =>
+      import('./components/proyectos/chohan/chohan.module').then(
+        (m) => m.ChohanModule
+      ),
+  },
+  {
+    path: 'proyectos/ecommerce',
+    loadChildren: () =>
+      import('./components/proyectos/ecommerce/ecommerce.module').then(
+        (m) => m.EcommerceModule
+      ),
+  },
   { path: '**', component: HomeComponent },
 ];
 

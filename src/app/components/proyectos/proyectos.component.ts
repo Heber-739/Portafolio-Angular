@@ -23,7 +23,7 @@ import { Router } from '@angular/router';
       state('end', style({ width: '100vw' })),
       transition('start => end', [
         animate(
-          '2s ease-in-out',
+          '3s ease-in-out',
           style({
             opacity: '0',
           })
@@ -41,6 +41,6 @@ export class ProyectosComponent implements OnInit {
     this.estadoAnimacion = this.estadoAnimacion === 'start' ? 'end' : 'start';
     setTimeout(() => {
       this.router.navigate(['proyectos', valor]);
-    }, 2001);
+    }, 2501);
   }
 }

@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AhorcadoComponent } from './ahorcado.component';
+import { EcommerceComponent } from './ecommerce.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-const routAhorcado: Routes = [{ path: '', component: AhorcadoComponent }];
+const routEcommerce: Routes = [{ path: '', component: EcommerceComponent }];
 
 @NgModule({
-  declarations: [AhorcadoComponent],
+  declarations: [EcommerceComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routAhorcado),
     ReactiveFormsModule,
+    RouterModule.forChild(routEcommerce),
   ],
   exports: [RouterModule],
 })
-export class RoutingAhorcadoModule {}
+export class RoutingEcommerceModule {}
