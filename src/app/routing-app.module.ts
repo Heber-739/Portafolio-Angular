@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EncriptadorComponent } from './components/proyectos/encriptador/encriptador.component';
 import { ClipboardModule } from 'ngx-clipboard';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PreloadModuleService } from './preload-module.service';
 
 const appRouts: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const appRouts: Routes = [
       import('./components/proyectos/ahorcado/ahorcado.module').then(
         (m) => m.AhorcadoModule
       ),
+    data: { preload: true },
   },
   {
     path: 'proyectos/chohan',
@@ -29,6 +31,7 @@ const appRouts: Routes = [
       import('./components/proyectos/chohan/chohan.module').then(
         (m) => m.ChohanModule
       ),
+    data: { preload: true },
   },
   {
     path: 'proyectos/ecommerce',
@@ -36,6 +39,7 @@ const appRouts: Routes = [
       import('./components/proyectos/ecommerce/ecommerce.module').then(
         (m) => m.EcommerceModule
       ),
+    data: { preload: true },
   },
   { path: '**', component: HomeComponent },
 ];
@@ -50,9 +54,11 @@ const appRouts: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot(appRouts),
     ClipboardModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(appRouts, {
+      preloadingStrategy: PreloadModuleService,
+    }),
   ],
   exports: [RouterModule],
 })

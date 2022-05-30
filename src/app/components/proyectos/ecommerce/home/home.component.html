@@ -1,0 +1,90 @@
+<main>
+  <div class="slider">
+    <div class="promocion">
+      <h2>Mes Promocional</h2>
+      <p>Prodductos seleccionados con 40% de descuento</p>
+      <button class="button">
+        <a href="./Todos_Productos.html">Ver Catálogo</a>
+      </button>
+    </div>
+    <ul>
+      <li>
+        <img src="assets/ecommerce/img/Portada_mario.png" />
+      </li>
+      <li>
+        <img src="assets/ecommerce/img/Portada_Play.png" />
+      </li>
+      <li>
+        <img src="assets/ecommerce/img/Portada_atari.png" />
+      </li>
+    </ul>
+  </div>
+  <main *ngFor="let group of itemList">
+    <div class="conteiner">
+      <div class="indicadores">
+        <h2>{{ group.name }}</h2>
+        <a href="#">Ver Todo &#10132;</a>
+      </div>
+      <figure
+        class="producto home_prod"
+        *ngFor="let i of group.array; let in = index"
+        (click)="verProducto(group.array, in)"
+      >
+        <img
+          class="imagen_producto"
+          src="{{ i.src }}"
+          alt="Imagen {{ i.src }}"
+          loading="lazy"
+        />
+        <figcaption>
+          <p class="descripcion_producto">{{ i.nombre }}</p>
+          <p class="precio_producto">${{ i.precio }}</p>
+          <p class="ver_producto">Ver Producto</p>
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <section class="informacion contenedor">
+    <div class="div_informacion">
+      <a href="#"
+        ><img
+          routerLink="home"
+          class="logo_geek logo_inferior"
+          src="assets/ecommerce/img/logo.svg"
+          alt="Logo del e-commerce"
+      /></a>
+      <p><a href="#">¿Quienes somos?</a></p>
+      <p><a href="#">Política de privacidad</a></p>
+      <p><a href="#">Programa de fidelidad</a></p>
+      <p><a href="#">Nuestras sucursales</a></p>
+      <p><a href="#">¿Cómo abrir una franquicia?</a></p>
+      <p><a href="#">Anuncie en nuestra web</a></p>
+    </div>
+    <div>
+      <form action="" class="formulario contacto">
+        <h2>Contactenos aquí</h2>
+        <label for="contacto_nombre" class="label">
+          Nombre:
+          <input
+            id="contacto_nombre"
+            type="text"
+            class="input"
+            placeholder="Ingrese su nombre"
+            required
+          />
+        </label>
+        <label for="contacto_mensaje" class="label">
+          Mensaje:
+          <textarea
+            id="contacto_mensaje"
+            class="input"
+            placeholder="Escribe tu mensaje"
+            required
+          ></textarea>
+        </label>
+        <button type="submit" class="button">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+</main>

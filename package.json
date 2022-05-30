@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "ghpages": "ng build --prod --base-href 'https://Heber-739.github.io/Portafolio-Angular/'"
+    "ghpages": "ng build --prod --base-href 'https://Heber-739.github.io/Portafolio-Angular/'",
+    "push": "ngh --dir dist/portafolio"
   },
   "private": true,
   "dependencies": {
@@ -33,7 +34,7 @@
     "@angular/cli": "~13.3.0",
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
-    "@types/node": "~12.11.1",
+    "@types/node": "^12.20.52",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

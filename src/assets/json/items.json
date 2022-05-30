@@ -1,0 +1,142 @@
+[
+    {
+        "name": "StarWars",
+        "array": [
+            {
+                "nombre": "Coleccionable Ben Solo",
+                "precio": "49",
+                "src": "assets/ecommerce/img/Ben_Solo.png"
+            },
+            {
+                "nombre": "Lego Darth Blazer + Piloto de caza",
+                "precio": "1669",
+                "src": "assets/ecommerce/img/Lego_DarthBlazer_PilotoCaza.png"
+            },
+            {
+                "nombre": "Coleccionable Grogu",
+                "precio": "45",
+                "src": "assets/ecommerce/img/Muñeco_Grogu.png"
+            },
+            {
+                "nombre": "Coleccionable Yoda",
+                "precio": "58",
+                "src": "assets/ecommerce/img/Muñeco_Yoda.png"
+            },
+            {
+                "nombre": "Coleccionable Star Troper",
+                "precio": "89",
+                "src": "assets/ecommerce/img/Star_trooper.png"
+            },
+            {
+                "nombre": "Taza Star Troper",
+                "precio": "25",
+                "src": "assets/ecommerce/img/Taza_trooper.png"
+            }
+        ]
+    },
+    {
+        "name": "Consolas",
+        "array": [
+            {
+                "nombre": "PlayStation 5",
+                "precio": "999",
+                "src": "assets/ecommerce/img/Play5.png"
+            },
+            {
+                "nombre": "Atari 2600",
+                "precio": "429",
+                "src": "assets/ecommerce/img/atari.png"
+            },
+            {
+                "nombre": "Game Boy Transparente",
+                "precio": "149",
+                "src": "assets/ecommerce/img/GameBoy_Transparente.png"
+            },
+            {
+                "nombre": "Nintendo NES",
+                "precio": "149",
+                "src": "assets/ecommerce/img/Nintendo_NES.png"
+            },
+            {
+                "nombre": "Xbox Serie X",
+                "precio": "599",
+                "src": "assets/ecommerce/img/Xbox_serieX.png"
+            },
+            {
+                "nombre": "Sega CDX",
+                "precio": "549",
+                "src": "assets/ecommerce/img/Sega_Genesi_CDXs.png"
+            }
+        ]
+    },
+    {
+        "name": "Accesorios",
+        "array": [
+            {
+                "nombre": "Switch Joystick",
+                "precio": "69",
+                "src": "assets/ecommerce/img/Joystick_inalambrico_Switch.png"
+            },
+            {
+                "nombre": "PlayStation VR",
+                "precio": "399",
+                "src": "assets/ecommerce/img/PlayStation_VR.png"
+            },
+            {
+                "nombre": "PlayStation4_control",
+                "precio": "59",
+                "src": "assets/ecommerce/img/PlayStation4_control.png"
+            },
+            {
+                "nombre": "Control Xbox Blanco",
+                "precio": "59",
+                "src": "assets/ecommerce/img/Control_xbox.png"
+            },
+            {
+                "nombre": "Teclado bluetooth",
+                "precio": "35",
+                "src": "assets/ecommerce/img/teclado.png"
+            },
+            {
+                "nombre": "Auriculares Sony",
+                "precio": "39",
+                "src": "assets/ecommerce/img/auriculares_sony.png"
+            }
+        ]
+    },
+    {
+        "name": "Otros Productos",
+        "array": [
+            {
+                "nombre": "Disfraz Gigante Pikachu",
+                "precio": "249",
+                "src": "assets/ecommerce/img/Peluche_Pikachu.png"
+            },
+            {
+                "nombre": "Coleccionable Sonic",
+                "precio": "39",
+                "src": "assets/ecommerce/img/Muñeco_Sonic.png"
+            },
+            {
+                "nombre": "Radio Retro Fucsia",
+                "precio": "59",
+                "src": "assets/ecommerce/img/Radio_Retro.png"
+            },
+            {
+                "nombre": "Toy Story coleccionables",
+                "precio": "29",
+                "src": "assets/ecommerce/img/ToyStory.png"
+            },
+            {
+                "nombre": "Coleccionable MArio",
+                "precio": "55",
+                "src": "assets/ecommerce/img/mario.png"
+            },
+            {
+                "nombre": "Dron Loyalse E58",
+                "precio": "65",
+                "src": "assets/ecommerce/img/dron.png"
+            }
+        ]
+    }
+]

@@ -89,28 +89,28 @@
   width: 40%;
 }
 
-.bienvenida,
-.mensajes,
-.despedida {
-  display: none;
+.text {
+  text-align: center;
   font-size: calc(0.2rem + 4vw);
   padding: 5px 2px;
   margin: 2px auto 5px;
 }
+.gano {
+  color: green;
+  font-weight: bold;
+}
+.perdio {
+  color: red;
+  font-weight: bold;
+}
 
 .continuar {
-  display: none; /* flex */
+  display: flex; /* flex */
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 10px auto 5px;
   padding: 0px 0px 5px;
   width: 95%;
-}
-
-.continue {
-  text-align: center;
-  margin: 5px 0 0;
-  width: 100%;
 }
 
 .apuestas {
@@ -127,6 +127,9 @@
 }
 .apuesta {
   margin: 0 auto 5px;
+}
+.input_text.ng-dirty.ng-invalid {
+  outline: 2px solid red;
 }
 
 /* --------------- Section 2 --------------- */
@@ -173,8 +176,17 @@
 }
 
 /* ---------------- Circulos -------------- */
+
 .cir1,
 .cir2 {
+  background: black;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+.circulo {
   background: black;
   border-radius: 50%;
   width: 80%;
@@ -230,11 +242,14 @@
 
 .titulo_col {
   border-right: 1px solid black;
-
   font-size: calc(0.4rem + 2vw);
   font-weight: bold;
   padding: 8px 2px 5px;
   text-align: center;
+}
+.cuerpo_tabla {
+  transform: scaley(-1);
+  width: 32vw;
 }
 .rows {
   transform: scaley(-1);

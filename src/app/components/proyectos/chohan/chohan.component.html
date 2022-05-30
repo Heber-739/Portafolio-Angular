@@ -1,21 +1,22 @@
 <main class="body">
   <div class="saldo box container">
-    <p>Saldo:</p>
-    <p>Apuesta:</p>
+    <p>Saldo: &cent; {{ billetera }}</p>
+    <p>Apuesta: {{ apostando }}</p>
   </div>
   <div class="resultado box container">
-    <p>Resultado:</p>
-    <p>Paridad:</p>
+    <p>Resultado: {{ resultado }}</p>
+    <p>Paridad: {{ paridad }}</p>
   </div>
   <h1 class="box container titulo">Comienza el Juego</h1>
   <section class="section1">
     <div class="presentacion box container">
-      <form class="form form_nombre" onsubmit="return false">
+      <form class="form form_nombre" *ngIf="visible">
         <input
           type="text"
           placeholder="¿Cuál es tu nombre?"
           class="input_text input"
           autocomplete="off"
+          [formControl]="nameInput"
         />
         <input
           type="number"
@@ -23,30 +24,76 @@
           class="input_text input"
           min="1"
           autocomplete="off"
+          [formControl]="billeteraInput"
         />
-        <button class="btn">Start!</button>
+        <button
+          type="button"
+          class="btn"
+          (click)="start()"
+          [disabled]="nameInput.invalid || billeteraInput.invalid"
+        >
+          Start!
+        </button>
       </form>
-      <p class="bienvenida"></p>
-      <p class="mensajes"></p>
-      <div class="continuar">
-        <p class="continue">¿Desea continuar?</p>
-        <button class="btn si_cont">Si</button>
-        <button class="btn no_cont">No</button>
+      <div *ngIf="!visible">
+        <div [ngSwitch]="switchMensaje">
+          <p class="text" *ngSwitchCase="'bienvenida'">
+            Bienvenido {{ nombre }},<br />Apuesta y Gana!
+          </p>
+          <p class="text gano" *ngSwitchCase="'gano'">Felicidades Ganó!!</p>
+          <p class="text perdio" *ngSwitchCase="'perdio'">Usted Perdió!</p>
+          <p class="text" *ngSwitchCase="'despedida'">
+            Muchas Gracias {{ nombre }} por jugar, hasta la próxima!
+          </p>
+        </div>
+        <div [ngSwitch]="SaldoSuficiente">
+          <p class="text" *ngSwitchCase="'disponible'">
+            Saldo disponible: &cent;{{ billetera }}
+          </p>
+          <p class="text" *ngSwitchCase="'insuficiente'">
+            Saldo insuficiente para seguir jugando
+          </p>
+          <p class="text" *ngSwitchDefault=""></p>
+        </div>
       </div>
-      <p class="despedida"></p>
+      <div class="continuar" *ngIf="pregunta">
+        <p class="text">¿Desea continuar?</p>
+        <button class="btn si_cont" (click)="deseaSeguir('si')">Si</button>
+        <button class="btn no_cont" (click)="deseaSeguir('no')">No</button>
+      </div>
     </div>
     <div class="apuestas box container">
-      <form class="form_apuestas" onsubmit="return false">
+      <div class="form_apuestas">
         <input
           type="number"
           placeholder="¿Cuánto apostará?"
           class="input_text apuesta"
           autocomplete="off"
-          disabled
+          min="1"
+          [max]="billetera"
+          [formControl]="apuestasInput"
         />
-        <button class="btn">Par</button>
-        <button class="btn">Impar</button>
-      </form>
+        <button
+          type="button"
+          class="btn"
+          [disabled]="apuestasInput.invalid || apuestasInput.disabled"
+          (click)="jugar('par')"
+        >
+          Par
+        </button>
+        <button
+          type="button"
+          class="btn"
+          [disabled]="
+            apuestasInput.invalid ||
+            apuestasInput.value == '' ||
+            apuestasInput.disabled
+          "
+          (click)="jugar('impar')"
+        >
+          Impar
+        </button>
+      </div>
     </div>
 
     <div class="container_dados container box">
@@ -87,7 +134,16 @@
           <th class="titulo_col">Billetera</th>
         </tr>
       </thead>
-      <tbody class="cuerpo_tabla"></tbody>
+      <tbody class="cuerpo_tabla">
+        <tr *ngFor="let objeto of registros; let i = index" class="rows">
+          <td>{{ i + 1 }}</td>
+          <td>{{ objeto.apuesta }}</td>
+          <td [ngClass]="objeto.gano == 'gano' ? 'gano' : 'perdio'">
+            {{ objeto.gano }}
+          </td>
+          <td>{{ objeto.saldo }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </main>
