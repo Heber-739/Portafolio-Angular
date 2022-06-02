@@ -16,7 +16,6 @@ export class NavegacionComponent implements OnInit {
   ngOnInit(): void {
     const color = this.cargarTheme.readTheme('theme');
     this.service.cambiarTemas(color);
-    console.log(color);
   }
 
   cambiarTema(valor: string, elemento: HTMLDivElement) {

@@ -1,0 +1,90 @@
+<app-header-ecommerce [itemList]="itemList"></app-header-ecommerce>
+<main class="body">
+  <div class="slider">
+    <div class="promocion">
+      <h2>Mes Promocional</h2>
+      <p>Productos seleccionados con 40% de descuento</p>
+      <button class="btn box">
+        <a href="./Todos_Productos.html">Ver Catálogo</a>
+      </button>
+    </div>
+    <ul>
+      <li>
+        <img src="assets/ecommerce/img/Portada_mario.png" />
+      </li>
+      <li>
+        <img src="assets/ecommerce/img/Portada_Play.png" />
+      </li>
+      <li>
+        <img src="assets/ecommerce/img/Portada_atari.png" />
+      </li>
+    </ul>
+  </div>
+  <div *ngFor="let group of itemList">
+    <div class="groups">
+      <div class="header">
+        <h2>{{ group.name }}</h2>
+        <a href="#">Ver Todo</a>
+      </div>
+      <figure
+        class="producto"
+        *ngFor="let i of group.array; let in = index"
+        (click)="verProducto(group.array, in)"
+      >
+        <img
+          class="imagen_producto"
+          src="{{ i.src }}"
+          alt="Imagen {{ i.src }}"
+          loading="lazy"
+        />
+        <figcaption>
+          <p class="descripcion_producto">{{ i.nombre }}</p>
+          <p class="precio_producto">${{ i.precio }}</p>
+          <p class="ver_producto">Ver Producto</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <section class="footer">
+    <img
+      routerLink="home"
+      class="logo_inferior"
+      src="assets/ecommerce/img/logo.svg"
+      alt="Logo del e-commerce"
+    />
+    <div class="informacion">
+      <div class="info_nav">
+        <p><a href="#">¿Quienes somos?</a></p>
+        <p><a href="#">Política de privacidad</a></p>
+        <p><a href="#">Programa de fidelidad</a></p>
+        <p><a href="#">Nuestras sucursales</a></p>
+        <p><a href="#">¿Cómo abrir una franquicia?</a></p>
+        <p><a href="#">Anuncie en nuestra web</a></p>
+      </div>
+      <div class="aclaracion">
+        <p>
+          Estos links solo son muestras de ejemplo y no contienen información.
+        </p>
+      </div>
+    </div>
+    <form class="contacto box" [formGroup]="formContact">
+      <h2>Contactenos aquí</h2>
+      <label for="contacto_nombre" class="label"> Nombre: </label>
+      <input
+        id="contacto_nombre"
+        type="text"
+        class="input_text"
+        placeholder="Ingrese su nombre"
+        formControlName="nombre"
+      />
+      <label for="contacto_mensaje" class="label"> Mensaje: </label>
+      <textarea
+        id="contacto_mensaje"
+        class="input_text"
+        placeholder="Escribe tu mensaje"
+        formControlName="mensaje"
+      ></textarea>
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+  </section>
+</main>

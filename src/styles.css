@@ -1,13 +1,13 @@
 @import "~normalize.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Montserrat&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Cabin+Condensed:wght@600&family=Montserrat&family=Nerko+One&display=swap");
 :root {
   --color1: #3c40a4;
   --color2: #4d68f0;
   --color3: #8697fe;
   --color4: #003567;
   --color5: #119e99;
+  --color6: #f27457;
 }
 
 * {
@@ -29,9 +29,8 @@ body {
     var(--color1)
   );
   background-repeat: no-repeat;
-  min-height: 100%;
   color: white;
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .box {
   border: 1px solid black;
@@ -71,6 +70,7 @@ body {
   box-sizing: border-box;
 }
 .btn {
+  width: fit-content;
   color: white;
   font-size: calc(0.4rem + 2vw);
   font-weight: bold;

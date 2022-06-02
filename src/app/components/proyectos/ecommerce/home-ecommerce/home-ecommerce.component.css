@@ -1,0 +1,266 @@
+.body {
+  background: white;
+  padding: 10px 0 0;
+  margin: 0;
+}
+p {
+  font-family: "Cabin Condensed", sans-serif;
+  text-indent: 0;
+  font-size: 0.9rem;
+  color: black;
+  padding: 3px 2px;
+}
+
+.btn {
+  background: var(--color6);
+  padding: 3px 7px;
+  margin: 10px 0px;
+  font-family: "Nerko One", cursive;
+  font-weight: lighter;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px black;
+}
+
+/* ---------- Slider ---------- */
+
+.slider {
+  position: relative;
+  width: 70vw;
+  height: fit-content;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 2px solid black;
+  box-shadow: 1px 1px 2px black;
+}
+.slider p,
+.slider a {
+  color: white;
+}
+.slider ul {
+  display: flex;
+  animation: cambio 15s infinite alternate;
+  width: 300%;
+}
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  29% {
+    margin-left: 0;
+  }
+
+  44% {
+    margin-left: -100%;
+  }
+  68% {
+    margin-left: -100%;
+  }
+
+  89% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -200%;
+  }
+}
+.promocion {
+  position: absolute;
+  background: #25365970;
+  width: 75%;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  text-shadow: 1px 1px black;
+  border-radius: 10px;
+  padding: 5px 5px 1px;
+}
+.promocion h2 {
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 1px 0 4px;
+}
+.promocion p {
+  font-size: 0.9rem;
+  padding: 3px 0px;
+}
+
+/* ------ Conteiner Productos ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 95%;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-family: "Nerko One", cursive;
+  font-weight: lighter;
+  color: #000;
+  margin: 10px;
+  text-shadow: 1px 1px var(--color6);
+  text-decoration: underline 3px black;
+}
+.header a {
+  font-family: "Cabin Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 1px 1px var(--color6);
+  text-decoration: underline 3px black;
+}
+.groups {
+  display: flex;
+  flex-wrap: wrap;
+  height: 310px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+/* .home_prod:nth-child(n + 4) {
+    display: none;
+  } */
+.producto {
+  width: 150px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.producto:hover {
+  transform: scale(1.05);
+  transition: all 500ms;
+}
+.imagen_producto {
+  width: 100%;
+}
+p.precio_producto {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+/* ------Form inicio sesion---------- */
+
+/* Home */
+.indicadores {
+  display: inline-flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.indicadores h2 {
+  margin: 10px 10px 2px;
+  font-size: 2em;
+  font-family: "Nerko One", cursive;
+  text-shadow: 1px 1px #000;
+}
+.indicadores a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px var(--color6);
+}
+.ver_producto {
+  text-align: center;
+  text-decoration: underline;
+  color: var(--color6);
+}
+/* -------------------- */
+.formulario {
+  background: linear-gradient(180deg, #027368, #04bf9d);
+  color: white;
+  height: auto;
+  width: 60vw;
+  text-align: center;
+  margin: 5vh auto;
+  padding: 5px 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 4px 1px black;
+  border-radius: 5px;
+}
+.label {
+  text-align: left;
+  display: block;
+  margin: 15px auto 0px;
+}
+
+.formulario h2 {
+  font-size: calc(1em + 3.5vw);
+  font-family: "Nerko One", cursive;
+  text-align: center;
+  text-shadow: 3px 3px 5px black;
+}
+
+/* ----------    Informacion y contacto   ---------- */
+
+.footer {
+  background: linear-gradient(180deg, #04bf9d, #027368);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo_inferior {
+  width: 70vw;
+  margin: 5px auto 10px;
+}
+.info_nav p {
+  padding: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-shadow: 1px 1px var(--color6);
+  letter-spacing: 1px;
+}
+.informacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 5px;
+}
+.aclaracion {
+  background-color: rgba(0, 0, 0, 0.289);
+  border-radius: 5px;
+}
+.aclaracion p {
+  color: rgba(255, 255, 255, 0.675);
+  padding: 10px;
+  width: 30vw;
+}
+.info_nav a {
+  color: rgb(255, 255, 255);
+}
+
+.contacto {
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  margin: 1px auto;
+  padding: 5px 10px;
+  background: #25365973;
+}
+.contacto h2 {
+  font-size: 2rem;
+  font-family: "Nerko One", cursive;
+  font-weight: lighter;
+  color: #fff;
+  padding: 10px;
+  text-shadow: 1px 1px black;
+  text-decoration: underline 3px #fff;
+}
+
+.label {
+  width: fit-content;
+  margin: 0;
+  align-self: flex-start;
+}
+.input_text {
+  outline: 2px solid var(--color6);
+}
