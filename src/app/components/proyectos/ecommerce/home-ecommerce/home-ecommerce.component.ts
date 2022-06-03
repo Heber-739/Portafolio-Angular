@@ -1,6 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LocalStorageService } from 'src/app/local-storage.service';
 
 @Component({
@@ -9,10 +8,6 @@ import { LocalStorageService } from 'src/app/local-storage.service';
   styleUrls: ['./home-ecommerce.component.css'],
 })
 export class HomeEcommerceComponent implements OnInit {
-  formContact = new FormGroup({
-    nombre: new FormControl('', [Validators.required]),
-    mensaje: new FormControl('', [Validators.required]),
-  });
   itemList: any;
   starwars: any;
   constructor(

@@ -1,0 +1,42 @@
+<section class="footer">
+  <img
+    routerLink="home"
+    class="logo_inferior"
+    src="assets/ecommerce/img/logo.svg"
+    alt="Logo del e-commerce"
+  />
+  <div class="informacion">
+    <div class="info_nav">
+      <p><a href="#">¿Quienes somos?</a></p>
+      <p><a href="#">Política de privacidad</a></p>
+      <p><a href="#">Programa de fidelidad</a></p>
+      <p><a href="#">Nuestras sucursales</a></p>
+      <p><a href="#">¿Cómo abrir una franquicia?</a></p>
+      <p><a href="#">Anuncie en nuestra web</a></p>
+    </div>
+    <div class="aclaracion">
+      <p>
+        Estos links solo son muestras de ejemplo y no contienen información.
+      </p>
+    </div>
+  </div>
+  <form class="contacto box" [formGroup]="formContact">
+    <h2>Contactenos aquí</h2>
+    <label for="contacto_nombre" class="label"> Nombre: </label>
+    <input
+      id="contacto_nombre"
+      type="text"
+      class="input_text"
+      placeholder="Ingrese su nombre"
+      formControlName="nombre"
+    />
+    <label for="contacto_mensaje" class="label"> Mensaje: </label>
+    <textarea
+      id="contacto_mensaje"
+      class="input_text"
+      placeholder="Escribe tu mensaje"
+      formControlName="mensaje"
+    ></textarea>
+    <button type="submit" class="btn">Enviar mensaje</button>
+  </form>
+</section>
