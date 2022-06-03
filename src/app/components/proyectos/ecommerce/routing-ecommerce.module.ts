@@ -20,6 +20,7 @@ const routEcommerce: Routes = [
       { path: 'carrito', component: CarritoComponent },
     ],
   },
+  { path: '**', component: EcommerceComponent },
 ];
 
 @NgModule({

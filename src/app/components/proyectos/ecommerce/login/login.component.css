@@ -1,0 +1,29 @@
+/* ------Form inicio sesion---------- */
+.contenedor {
+  padding: 2vh 0 5vh;
+}
+/* Home */
+.indicadores {
+  display: inline-flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.indicadores h2 {
+  margin: 10px 10px 2px;
+  font-size: 2em;
+  font-family: "Nerko One", cursive;
+  text-shadow: 1px 1px #f27457;
+}
+.indicadores a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px #f27457;
+}
+.ver_producto {
+  text-align: center;
+  text-decoration: underline;
+  color: #f27457;
+}
+/* -------------------- */

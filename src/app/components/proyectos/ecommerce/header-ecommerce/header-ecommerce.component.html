@@ -1,5 +1,5 @@
 <header class="cabecera">
-  <a routerLink="home" *ngIf="!buscador"
+  <a (click)="redirigir('home')" *ngIf="!buscador"
     ><img
       class="logo_geek"
       src="assets/ecommerce/img/logo.svg"
@@ -13,20 +13,20 @@
       autocomplete="off"
       [formControl]="searchInput"
     />
-    <div class="resultados" *ngIf="searchInput.dirty">
+    <div class="resultados" *ngIf="searchInput.valid && searchInput.dirty">
       <div class="matches" *ngFor="let i of matches">
         <img src="{{ i.src }}" alt="{{ i.nombre }}" />
         <p>{{ i.nombre }}</p>
-        <p class="seearch_precio">${{ i.precio }}</p>
+        <p>${{ i.precio }}</p>
       </div>
       <a class="ver_todo">Ver Todo</a>
     </div>
   </form>
-  <a *ngIf="!buscador" routerLink="login" class="btn button">Login</a>
+  <a *ngIf="!buscador" (click)="redirigir('login')" class="btn button">Login</a>
   <div [ngSwitch]="buscador">
     <img
       *ngSwitchCase="false"
-      class="btn caja"
+      class="btn box caja"
       src="assets/ecommerce/img/search.png"
       alt="Logo Buscador"
       (click)="openSearch()"

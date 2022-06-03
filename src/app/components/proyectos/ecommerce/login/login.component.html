@@ -1,1 +1,116 @@
-<p>login works!</p>
+<body>
+  <header>
+    <div class="cabecera">
+      <a href="./index.html"
+        ><img
+          class="logo_geek logo_superior"
+          src="./img/logo.png"
+          alt="Logo del e-commerce"
+      /></a>
+      <div class="searcher">
+        <input
+          type="text"
+          id="input_buscador"
+          placeholder="Buscar en esta página &#x1f50d;"
+          class="input_buscador input"
+          autocomplete="off"
+        />
+        <img
+          class="icon_search"
+          src="./img/search.png"
+          alt="Logo Buscador"
+          onclick="searchElement()"
+        />
+      </div>
+      <button class="button login">Login</button>
+    </div>
+  </header>
+  <main>
+    <section class="contenedor">
+      <div>
+        <form action="/" class="formulario">
+          <h2>Iniciar Sesión</h2>
+          <label for="correo" class="label"
+            >Correo electrónico:
+            <input
+              id="correo"
+              class="input"
+              type="email"
+              placeholder="Correo electrónico"
+              required
+              autocomplete="off"
+            />
+          </label>
+          <label for="password" class="label">
+            Contraseña:
+            <input
+              id="password"
+              class="input"
+              type="password"
+              placeholder="Contraseña"
+              required
+              autocomplete="off"
+            />
+          </label>
+          <button class="button entrar" type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+    <section class="informacion contenedor">
+      <div class="div_informacion">
+        <a href="./index.html"
+          ><img
+            class="logo_geek logo_inferior"
+            src="./img/logo.png"
+            alt="Logo del e-commerce"
+        /></a>
+        <p><a href="#">¿Quienes somos?</a></p>
+        <p><a href="#">Política de privacidad</a></p>
+        <p><a href="#">Programa de fidelidad</a></p>
+        <p><a href="#">Nuestras sucursales</a></p>
+        <p><a href="#">¿Cómo abrir una franquicia?</a></p>
+        <p><a href="#">Anuncie en nuestra web</a></p>
+      </div>
+      <div>
+        <form action="" class="formulario contacto">
+          <h2>Contactenos aquí</h2>
+          <label for="contacto_nombre" class="label">
+            Nombre:
+            <input
+              id="contacto_nombre"
+              type="text"
+              class="input"
+              placeholder="Ingrese su nombre"
+              required
+            />
+          </label>
+          <label for="contacto_mensaje" class="label">
+            Mensaje:
+            <textarea
+              id="contacto_mensaje"
+              class="input"
+              placeholder="Escribe tu mensaje"
+              required
+            ></textarea>
+          </label>
+          <button type="submit" class="button">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p class="text_footer">Desarrollado por Heber Duarte.</p>
+      <div class="footer">
+        <p class="text_footer">&copy 2022</p>
+        <p class="text_footer">
+          <a href="https://github.com/Heber-739" target="_blank">Github</a>
+        </p>
+        <p class="text_footer">
+          <a href="https://www.linkedin.com/in/heber-duarte-49a84b155/"
+            >Linkedin</a
+          >
+        </p>
+      </div>
+    </footer>
+  </main>
+  <script src="./javascript/inicio_sesion.js"></script>
+</body>

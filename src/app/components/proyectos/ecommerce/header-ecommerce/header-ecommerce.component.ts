@@ -11,7 +11,7 @@ export class HeaderEcommerceComponent implements OnInit, AfterViewInit {
   @Input() itemList: any;
   buscador: boolean = false;
   item: any;
-  searchInput = new FormControl('', []);
+  searchInput = new FormControl('', [Validators.required]);
   matches: any[];
 
   constructor(private router: Router) {}
@@ -33,7 +33,6 @@ export class HeaderEcommerceComponent implements OnInit, AfterViewInit {
   }
   search(value: any) {
     let newItemList: string[] = [];
-    console.log(value.length);
     if (value.length >= 2) {
       for (let index = 0; index < this.itemList.length; index++) {
         let element = this.itemList[index].array;
@@ -45,7 +44,7 @@ export class HeaderEcommerceComponent implements OnInit, AfterViewInit {
         }
       }
     }
-
+    console.log(newItemList);
     this.matches = newItemList;
   }
 }

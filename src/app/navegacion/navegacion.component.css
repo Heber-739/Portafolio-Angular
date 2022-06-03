@@ -71,6 +71,7 @@
   right: 20px;
   top: 15vw;
   background: var(--color4);
+  z-index: 99;
 }
 
 .tema_default,
