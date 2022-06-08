@@ -10,6 +10,20 @@ p {
   color: black;
   padding: 3px 2px;
 }
+.container_descuento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+span {
+  font-size: smaller;
+  padding: 0px 5px;
+  color: red;
+  font-weight: bolder;
+}
+.precioAnterior {
+  text-decoration: line-through;
+}
 
 .btn {
   background: var(--color6);

@@ -1,11 +1,11 @@
 <app-header-ecommerce [itemList]="itemList"></app-header-ecommerce>
 <main class="body">
-  <div class="slider">
+  <div class="slider" *ngIf="!verTodo">
     <div class="promocion">
       <h2>Mes Promocional</h2>
-      <p>Productos seleccionados con 40% de descuento</p>
-      <button class="btn box">
-        <a href="./Todos_Productos.html">Ver Catálogo</a>
+      <p>Productos seleccionados con hasta 40% de descuento</p>
+      <button type="button" class="btn box" (click)="verMas()">
+        Ver productos
       </button>
     </div>
     <ul>
@@ -26,7 +26,7 @@
         <h2 class="titulo">{{ group.name }}</h2>
         <div [ngSwitch]="verTodo">
           <a class="link" *ngSwitchCase="false" (click)="verMas()">Ver Todo</a>
-          <a class="link" *ngSwitchCase="true" (click)="verMas()">Ver Menos</a>
+          <a class="link" *ngSwitchCase="true" (click)="verMas()">Volver</a>
         </div>
       </div>
       <figure
@@ -41,7 +41,19 @@
         />
         <figcaption>
           <p class="descripcion_producto">{{ i.nombre }}</p>
-          <p class="precio_producto">${{ i.precio }}</p>
+          <p *ngIf="!i.descuento" class="precio_producto">
+            {{ i.precio | currency: "$":"symbol":"2.0" }}
+          </p>
+          <div *ngIf="i.descuento" class="container_descuento">
+            <p class="precio_producto">
+              {{ nuevoPrecio(i) | currency: "$":"symbol":"2.0" }}
+              <span *ngIf="i.descuento"> -{{ i.descuento }}%</span>
+            </p>
+            <p class="precioAnterior">
+              {{ i.precio | currency: "$":"symbol":"2.0" }}
+            </p>
+          </div>
+
           <p class="ver_producto">Ver Producto</p>
         </figcaption>
       </figure>

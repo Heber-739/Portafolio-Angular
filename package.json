@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "ghpages": "ng build --base-href 'https://Heber-739.github.io/Portafolio-Angular/'",
-    "push": "s"
+    "push": "ngh --dir dist/portaolio"
   },
   "private": true,
   "dependencies": {

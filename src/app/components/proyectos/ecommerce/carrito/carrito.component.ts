@@ -39,7 +39,12 @@ export class CarritoComponent implements OnInit {
   }
   montoTotal(i: any) {
     let precio = parseInt(i.precio);
-    return precio * this.cantidades[i.nombre];
+    if (i.descuento) {
+      let descuento = (100 - parseInt(i.descuento)) / 100;
+      return Math.round(precio * this.cantidades[i.nombre] * descuento);
+    } else {
+      return precio * this.cantidades[i.nombre];
+    }
   }
   modificarUnidades() {
     this.modificar = !this.modificar;

@@ -10,7 +10,13 @@
         alt="Imagen {{ producto.src }}"
       />
       <figcaption>
-        <p class="precio_producto">Precio unitario: ${{ producto.precio }}</p>
+        <p class="precio_producto">
+          Precio unitario:
+          {{ nuevoPrecio(producto) | currency: "":"symbol":"2.0"
+          }}<span *ngIf="producto.descuento"
+            >-{{ producto.descuento | number }}%</span
+          >
+        </p>
       </figcaption>
     </figure>
     <div class="descripcion">

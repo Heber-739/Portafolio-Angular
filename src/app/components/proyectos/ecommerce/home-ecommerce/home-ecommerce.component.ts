@@ -23,4 +23,9 @@ export class HomeEcommerceComponent implements OnInit {
   verMas() {
     this.verTodo = !this.verTodo;
   }
+  nuevoPrecio(item: any) {
+    let precio = parseInt(item.precio);
+    let descuento = (100 - parseInt(item.descuento)) / 100;
+    return Math.round(precio * descuento);
+  }
 }

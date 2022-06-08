@@ -1,22 +1,33 @@
 <app-header-ecommerce></app-header-ecommerce>
-<form class="container box form">
+<form class="container box form" [formGroup]="login">
   <h2>Iniciar Sesión</h2>
   <label for="correo"
     >Correo electrónico:
     <input
+      id="correo"
       class="input_text"
       type="email"
       placeholder="Correo electrónico"
       autocomplete="off"
+      formControlName="correo"
     />
   </label>
+  <small
+    *ngIf="
+      login.get('correo')?.hasError('required') && login.get('correo')?.dirty
+    "
+  >
+    Correo</small
+  >
   <label for="password">
     Contraseña:
     <input
+      id="password"
       class="input_text"
       type="password"
       placeholder="Contraseña"
       autocomplete="off"
+      formControlName="contraseña"
     />
   </label>
   <button class="btn entrar" type="submit">Entrar</button>

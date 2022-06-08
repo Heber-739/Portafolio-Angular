@@ -21,6 +21,12 @@ section {
   height: fit-content;
   padding: 5px 10px;
 }
+span {
+  font-size: 80%;
+  padding: 15px 2px;
+  color: yellow;
+  font-weight: bolder;
+}
 
 .titulo {
   font-size: 1.4rem;

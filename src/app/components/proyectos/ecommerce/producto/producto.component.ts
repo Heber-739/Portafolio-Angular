@@ -43,4 +43,13 @@ export class ProductoComponent implements OnInit {
       this.cantidadItems.setValue(numero - 1);
     }
   }
+  nuevoPrecio(item: any) {
+    let precio = parseInt(item.precio);
+    if (item.descuento) {
+      let descuento = (100 - parseInt(item.descuento)) / 100;
+      return Math.round(precio * descuento);
+    } else {
+      return precio;
+    }
+  }
 }

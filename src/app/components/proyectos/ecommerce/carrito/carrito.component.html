@@ -41,7 +41,10 @@
           </button>
         </div>
       </div>
-      <p class="total">Total: ${{ montoTotal(i) }}</p>
+      <p class="total">
+        Total: {{ montoTotal(i) | currency: "$":"symbol":"2.0"
+        }}<span *ngIf="i.descuento"> -{{ i.descuento }}%</span>
+      </p>
       <button
         type="button"
         *ngIf="modificar"
