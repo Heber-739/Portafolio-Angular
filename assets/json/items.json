@@ -3,34 +3,77 @@
         "name": "StarWars",
         "array": [
             {
-                "nombre": "Coleccionable Ben Solo",
+                "nombre": "Muñeco Ben Solo",
                 "precio": "49",
-                "src": "assets/ecommerce/img/Ben_Solo.png"
+                "src": "assets/ecommerce/img/Ben_Solo.png",
+                "id": "0001",
+                "descripcion": [
+                    "Edad: +4 años",
+                    "Altura: 28 cm",
+                    "Arma como accesorio",
+                    "Muñeco articulado"
+                ]
             },
             {
                 "nombre": "Lego Darth Blazer + Piloto de caza",
                 "precio": "1669",
-                "src": "assets/ecommerce/img/Lego_DarthBlazer_PilotoCaza.png"
+                "src": "assets/ecommerce/img/Lego_DarthBlazer_PilotoCaza.png",
+                "id": "0002",
+                "descripcion": [
+                    "Edad: +18 años",
+                    "Altura: 20cm",
+                    "Instrucciones incluidas",
+                    "Material: plastico"
+                ]
             },
             {
-                "nombre": "Coleccionable Grogu",
+                "nombre": "Muñeco Grogu",
                 "precio": "45",
-                "src": "assets/ecommerce/img/Muñeco_Grogu.png"
+                "src": "assets/ecommerce/img/Muñeco_Grogu.png",
+                "id": "0003",
+                "descripcion": [
+                    "Edad: +3 años",
+                    "Altura: 24cm",
+                    "Material: vinilo",
+                    "Sin accesorios"
+                ]
             },
             {
-                "nombre": "Coleccionable Yoda",
+                "nombre": "Muñeco Yoda",
                 "precio": "58",
-                "src": "assets/ecommerce/img/Muñeco_Yoda.png"
+                "src": "assets/ecommerce/img/Muñeco_Yoda.png",
+                "id": "0004",
+                "descripcion": [
+                    "Edad: +3 años",
+                    "Altura: 20cm",
+                    "Material: PLA",
+                    "Sin accesorios"
+                ]
             },
             {
-                "nombre": "Coleccionable Star Troper",
+                "nombre": "Muñeco Star Troper",
                 "precio": "89",
-                "src": "assets/ecommerce/img/Star_trooper.png"
+                "src": "assets/ecommerce/img/Star_trooper.png",
+                "id": "0005",
+                "descripcion": [
+                    "Edad: +3 años",
+                    "Altura: 30cm",
+                    "Material: plastico",
+                    "Muñeco Articulado",
+                    "Incluye accesorio"
+                ]
             },
             {
                 "nombre": "Taza Star Troper",
                 "precio": "25",
-                "src": "assets/ecommerce/img/Taza_trooper.png"
+                "src": "assets/ecommerce/img/Taza_trooper.png",
+                "id": "0006",
+                "descripcion": [
+                    "Capacidad: 350cc",
+                    "Material: Ceramica",
+                    "Medidas: 12x15x12 cm",
+                    "Diseño con esmaltado brilloso"
+                ]
             }
         ]
     },
@@ -40,32 +83,75 @@
             {
                 "nombre": "PlayStation 5",
                 "precio": "999",
-                "src": "assets/ecommerce/img/Play5.png"
+                "src": "assets/ecommerce/img/Play5.png",
+                "id": "1001",
+                "descripcion": [
+                    "Capacidad 825 GB",
+                    "Resolución de 3840px x 2160px",
+                    "Memoria RAM de 16GB",
+                    "Controles incluidos: 1",
+                    "Conexión Wi-Fi"
+                ]
             },
             {
                 "nombre": "Atari 2600",
                 "precio": "429",
-                "src": "assets/ecommerce/img/atari.png"
+                "src": "assets/ecommerce/img/atari.png",
+                "id": "1002",
+                "descripcion": [
+                    "Capacidad 4 kB",
+                    "Resolución de 192px x 160px",
+                    "Memoria RAM 128 B",
+                    "Controles incluidos: 2"
+                ]
             },
             {
                 "nombre": "Game Boy Transparente",
                 "precio": "149",
-                "src": "assets/ecommerce/img/GameBoy_Transparente.png"
+                "src": "assets/ecommerce/img/GameBoy_Transparente.png",
+                "id": "1003",
+                "descripcion": [
+                    "Pilas incluidas",
+                    "Resolución de 160px x 140px",
+                    "Medidas: 16x14x4 cm",
+                    "Duración: 10h"
+                ]
             },
             {
                 "nombre": "Nintendo NES",
                 "precio": "149",
-                "src": "assets/ecommerce/img/Nintendo_NES.png"
+                "src": "assets/ecommerce/img/Nintendo_NES.png",
+                "id": "1004",
+                "descripcion": [
+                    "No incluye cartuchos",
+                    "Resolución de 256px x 240px",
+                    "Medidas: 73x260x190 mm",
+                    "Controles incluidos 2"
+                ]
             },
             {
                 "nombre": "Xbox Serie X",
                 "precio": "599",
-                "src": "assets/ecommerce/img/Xbox_serieX.png"
+                "src": "assets/ecommerce/img/Xbox_serieX.png",
+                "id": "1005",
+                "descripcion": [
+                    "Capacidad 1 TB",
+                    "Resolución de 2560px x 1440px",
+                    "Memoria RAM de 16GB",
+                    "Controles incluidos: 1",
+                    "Conexión Wi-Fi"
+                ]
             },
             {
                 "nombre": "Sega CDX",
                 "precio": "549",
-                "src": "assets/ecommerce/img/Sega_Genesi_CDXs.png"
+                "src": "assets/ecommerce/img/Sega_Genesi_CDXs.png",
+                "id": "1006",
+                "descripcion": [
+                    "Juegos incluidos: 5",
+                    "Resolución de 256px x 192px",
+                    "Controles incluidos: 1"
+                ]
             }
         ]
     },
@@ -75,32 +161,70 @@
             {
                 "nombre": "Switch Joystick",
                 "precio": "69",
-                "src": "assets/ecommerce/img/Joystick_inalambrico_Switch.png"
+                "src": "assets/ecommerce/img/Joystick_inalambrico_Switch.png",
+                "id": "2001",
+                "descripcion": [
+                    "Inalámbrico",
+                    "Detección de movimiento",
+                    "Bluetooth",
+                    "Accesorios incluidos: correas"
+                ]
             },
             {
                 "nombre": "PlayStation VR",
                 "precio": "399",
-                "src": "assets/ecommerce/img/PlayStation_VR.png"
+                "src": "assets/ecommerce/img/PlayStation_VR.png",
+                "id": "2002",
+                "descripcion": [
+                    "Marca Sony",
+                    "Compatibilidad: PlayStation 4",
+                    "Sin accesorios"
+                ]
             },
             {
                 "nombre": "PlayStation4_control",
                 "precio": "59",
-                "src": "assets/ecommerce/img/PlayStation4_control.png"
+                "src": "assets/ecommerce/img/PlayStation4_control.png",
+                "id": "2003",
+                "descripcion": [
+                    "Inalámbrico",
+                    "Detección de movimiento",
+                    "Bluetooth",
+                    "Con vibraciones"
+                ]
             },
             {
                 "nombre": "Control Xbox Blanco",
                 "precio": "59",
-                "src": "assets/ecommerce/img/Control_xbox.png"
+                "src": "assets/ecommerce/img/Control_xbox.png",
+                "id": "2004",
+                "descripcion": [
+                    "Inalámbrico",
+                    "Bluetooth",
+                    "Con vibraciones"
+                ]
             },
             {
-                "nombre": "Teclado bluetooth",
+                "nombre": "Teclado Palmone",
                 "precio": "35",
-                "src": "assets/ecommerce/img/teclado.png"
+                "src": "assets/ecommerce/img/teclado.png",
+                "id": "2005",
+                "descripcion": [
+                    "Medidas: 21x17x4 cm",
+                    "105 teclas",
+                    "Idioma Inglés"
+                ]
             },
             {
                 "nombre": "Auriculares Sony",
                 "precio": "39",
-                "src": "assets/ecommerce/img/auriculares_sony.png"
+                "src": "assets/ecommerce/img/auriculares_sony.png",
+                "id": "2006",
+                "descripcion": [
+                    "Frecuencia: 10 a 20 kHz",
+                    "Plug 3.5 mm",
+                    "Cable 2 m"
+                ]
             }
         ]
     },
@@ -110,32 +234,75 @@
             {
                 "nombre": "Disfraz Gigante Pikachu",
                 "precio": "249",
-                "src": "assets/ecommerce/img/Peluche_Pikachu.png"
+                "src": "assets/ecommerce/img/Peluche_Pikachu.png",
+                "id": "3001",
+                "descripcion": [
+                    "Talles disponibles:",
+                    "S: 160-170 cm y M: 170-175 cm",
+                    "Buena resistencia a lluvia, golpes y colisiones",
+                    "Molde de espuma de poliestireno"
+                ]
             },
             {
-                "nombre": "Coleccionable Sonic",
+                "nombre": "Muñeco Sonic",
                 "precio": "39",
-                "src": "assets/ecommerce/img/Muñeco_Sonic.png"
+                "src": "assets/ecommerce/img/Muñeco_Sonic.png",
+                "id": "3002",
+                "descripcion": [
+                    "Edad: +3 años",
+                    "Altura: 12cm",
+                    "Material: plastico",
+                    "Muñeco Articulado"
+                ]
             },
             {
-                "nombre": "Radio Retro Fucsia",
+                "nombre": "Radio despertador",
                 "precio": "59",
-                "src": "assets/ecommerce/img/Radio_Retro.png"
+                "src": "assets/ecommerce/img/Radio_Retro.png",
+                "id": "3003",
+                "descripcion": [
+                    "Color unico",
+                    "Dimenciones: 310 x 80 x 145 mm",
+                    "Sleep Timer",
+                    "AM: 540~1600 kHz; FM: 88~108 MHz"
+                ]
             },
             {
-                "nombre": "Coleccionable Toy Story ",
+                "nombre": "Muñeco Toy Story ",
                 "precio": "29",
-                "src": "assets/ecommerce/img/ToyStory.png"
+                "src": "assets/ecommerce/img/ToyStory.png",
+                "id": "3004",
+                "descripcion": [
+                    "Edad: +3 años",
+                    "Altura: 30cm",
+                    "Material: tela",
+                    "Muñeco Articulado"
+                ]
             },
             {
-                "nombre": "Coleccionable MArio",
+                "nombre": "Muñeco Mario",
                 "precio": "55",
-                "src": "assets/ecommerce/img/mario.png"
+                "src": "assets/ecommerce/img/mario.png",
+                "id": "3005",
+                "descripcion": [
+                    "Edad: +3 años",
+                    "Altura: 10cm",
+                    "Material: plastico",
+                    "Muñeco Articulado"
+                ]
             },
             {
                 "nombre": "Dron Loyalse E58",
                 "precio": "65",
-                "src": "assets/ecommerce/img/dron.png"
+                "src": "assets/ecommerce/img/dron.png",
+                "id": "3006",
+                "descripcion": [
+                    "Resolución Full HD",
+                    "4 motores",
+                    "Giro 360°",
+                    "Tiempo de vuelo max 9m",
+                    "Accesorios y manual incluidos"
+                ]
             }
         ]
     }
