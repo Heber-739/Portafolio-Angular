@@ -30,19 +30,26 @@
   background: var(--color6);
   text-shadow: 1px 1px black;
 }
+.iconoBuscar {
+  display: flex;
+  align-self: center;
+}
 .caja {
   border: 1px solid black;
   border-radius: 6px;
   box-shadow: 1px 1px 2px 1px black;
-  width: 30px;
+  width: 32px;
+  padding: 5px;
   background: var(--color6);
+}
+.btn:active {
+  box-shadow: inset 1px 1px 5px 1px black;
 }
 .search {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80vw;
-  align-self: center;
   position: relative;
 }
 .resultados {

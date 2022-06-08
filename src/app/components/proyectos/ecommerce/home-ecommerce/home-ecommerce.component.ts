@@ -8,18 +8,19 @@ import { LocalStorageService } from 'src/app/local-storage.service';
   styleUrls: ['./home-ecommerce.component.css'],
 })
 export class HomeEcommerceComponent implements OnInit {
+  verTodo: boolean = false;
   itemList: any;
   starwars: any;
-  constructor(
-    private httpClient: HttpClient,
-    private localStorage: LocalStorageService
-  ) {}
+  constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {
     this.httpClient.get('assets/json/items.json').subscribe((data) => {
       this.itemList = data;
-      this.localStorage.addItem('items', this.itemList);
+      localStorage.setItem('items', JSON.stringify(this.itemList));
     });
   }
-  verProducto(array: string[], index: number) {}
+
+  verMas() {
+    this.verTodo = !this.verTodo;
+  }
 }

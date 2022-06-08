@@ -124,9 +124,7 @@ p {
   margin: 10px auto;
   overflow: hidden;
 }
-/* .home_prod:nth-child(n + 4) {
-    display: none;
-  } */
+
 .producto {
   width: 150px;
   margin: 10px auto;
@@ -142,6 +140,9 @@ p {
 p.precio_producto {
   font-size: 1.2rem;
   font-weight: bolder;
+}
+.verTodo {
+  height: fit-content;
 }
 
 /* ------Form inicio sesion---------- */

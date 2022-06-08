@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './header-ecommerce.component.html',
   styleUrls: ['./header-ecommerce.component.css'],
 })
-export class HeaderEcommerceComponent implements OnInit, AfterViewInit {
+export class HeaderEcommerceComponent implements OnInit {
   @Input() itemList: any;
   buscador: boolean = false;
   item: any;

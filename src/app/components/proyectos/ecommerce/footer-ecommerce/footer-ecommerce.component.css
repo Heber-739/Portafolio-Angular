@@ -71,4 +71,5 @@
   padding: 5px 10px;
   font-family: "Nerko One", cursive;
   font-weight: lighter;
+  background: var(--color6);
 }

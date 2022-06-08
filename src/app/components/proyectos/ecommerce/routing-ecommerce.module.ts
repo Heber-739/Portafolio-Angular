@@ -8,11 +8,13 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { HomeEcommerceComponent } from './home-ecommerce/home-ecommerce.component';
 import { HeaderEcommerceComponent } from './header-ecommerce/header-ecommerce.component';
 import { FooterEcommerceComponent } from './footer-ecommerce/footer-ecommerce.component';
+import { ProductoComponent } from './producto/producto.component';
 
 const routEcommerce: Routes = [
   { path: '', component: HomeEcommerceComponent },
   { path: 'login', component: LoginComponent },
   { path: 'administracion', component: AdminComponent },
+  { path: 'producto/:id', component: ProductoComponent },
   { path: 'carrito', component: CarritoComponent },
   { path: '**', component: HomeEcommerceComponent },
 ];
@@ -21,6 +23,7 @@ const routEcommerce: Routes = [
   declarations: [
     HomeEcommerceComponent,
     HeaderEcommerceComponent,
+    ProductoComponent,
     LoginComponent,
     CarritoComponent,
     AdminComponent,

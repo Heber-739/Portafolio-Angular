@@ -21,21 +21,23 @@
     </ul>
   </div>
   <div *ngFor="let group of itemList">
-    <div class="groups">
+    <div class="groups" [class.verTodo]="verTodo">
       <div class="header">
         <h2 class="titulo">{{ group.name }}</h2>
-        <a href="#" class="link">Ver Todo</a>
+        <div [ngSwitch]="verTodo">
+          <a class="link" *ngSwitchCase="false" (click)="verMas()">Ver Todo</a>
+          <a class="link" *ngSwitchCase="true" (click)="verMas()">Ver Menos</a>
+        </div>
       </div>
       <figure
         class="producto"
-        *ngFor="let i of group.array; let in = index"
-        (click)="verProducto(group.array, in)"
+        *ngFor="let i of group.array"
+        [routerLink]="['/proyectos', 'ecommerce', 'producto', i.id]"
       >
         <img
           class="imagen_producto"
           src="{{ i.src }}"
           alt="Imagen {{ i.src }}"
-          loading="lazy"
         />
         <figcaption>
           <p class="descripcion_producto">{{ i.nombre }}</p>

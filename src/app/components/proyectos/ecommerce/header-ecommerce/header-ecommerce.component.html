@@ -1,5 +1,5 @@
 <header class="cabecera">
-  <a (click)="redirigir('home')" *ngIf="!buscador"
+  <a (click)="redirigir('')" *ngIf="!buscador"
     ><img
       class="logo_geek"
       src="assets/ecommerce/img/logo.svg"
@@ -23,7 +23,13 @@
     </div>
   </form>
   <a *ngIf="!buscador" (click)="redirigir('login')" class="btn button">Login</a>
-  <div [ngSwitch]="buscador">
+  <img
+    src="assets/ecommerce/img/carrito.svg"
+    alt="carrito"
+    class="caja btn"
+    (click)="redirigir('carrito')"
+  />
+  <div [ngSwitch]="buscador" class="iconoBuscar">
     <img
       *ngSwitchCase="false"
       class="btn box caja"

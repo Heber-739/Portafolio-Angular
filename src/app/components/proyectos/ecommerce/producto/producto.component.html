@@ -1,0 +1,54 @@
+<app-header-ecommerce></app-header-ecommerce>
+<section>
+  <a class="link" [routerLink]="['/proyectos', 'ecommerce', '']">Volver</a>
+  <div class="producto box">
+    <h2 class="titulo">{{ producto.nombre }}</h2>
+    <figure>
+      <img
+        class="imagen_producto"
+        src="{{ producto.src }}"
+        alt="Imagen {{ producto.src }}"
+      />
+      <figcaption>
+        <p class="precio_producto">Precio unitario: ${{ producto.precio }}</p>
+      </figcaption>
+    </figure>
+    <div class="descripcion">
+      <p *ngFor="let i of producto.descripcion">- {{ i }}</p>
+      <form>
+        <button type="button" (click)="nroPedidos('-')" class="btn">-</button>
+        <input
+          [formControl]="cantidadItems"
+          class="nroItems input_text"
+          type="number"
+          min="1"
+        />
+        <button type="button" (click)="nroPedidos('+')" class="btn">+</button>
+        <button type="button" (click)="agregarCarrito()" class="btn add">
+          Añadir al carrito
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div>
+    <div class="groups">
+      <div class="header">
+        <h2 class="titulo">Otros productos:</h2>
+      </div>
+    </div>
+    <figure
+      class="producto"
+      *ngFor="let i of sugerencias"
+      [routerLink]="['/proyectos', 'ecommerce', 'producto', i.id]"
+    >
+      <img class="imagen_producto" src="{{ i.src }}" alt="Imagen {{ i.src }}" />
+      <figcaption>
+        <p class="descripcion_producto">{{ i.nombre }}</p>
+        <p class="precio_producto">${{ i.precio }}</p>
+        <p class="ver_producto">Ver Producto</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+<app-footer-ecommerce></app-footer-ecommerce>
