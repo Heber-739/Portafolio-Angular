@@ -24,7 +24,8 @@
                     "Altura: 20cm",
                     "Instrucciones incluidas",
                     "Material: plastico"
-                ]
+                ],
+                "descuento": "15"
             },
             {
                 "nombre": "Muñeco Grogu",
@@ -103,7 +104,8 @@
                     "Resolución de 192px x 160px",
                     "Memoria RAM 128 B",
                     "Controles incluidos: 2"
-                ]
+                ],
+                "descuento": "15"
             },
             {
                 "nombre": "Game Boy Transparente",
@@ -151,7 +153,8 @@
                     "Juegos incluidos: 5",
                     "Resolución de 256px x 192px",
                     "Controles incluidos: 1"
-                ]
+                ],
+                "descuento": "40"
             }
         ]
     },
@@ -302,7 +305,8 @@
                     "Giro 360°",
                     "Tiempo de vuelo max 9m",
                     "Accesorios y manual incluidos"
-                ]
+                ],
+                "descuento": "10"
             }
         ]
     }
