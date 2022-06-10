@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 220px;
+  height: fit-content;
   margin: 50px auto 30px;
   width: 75vw;
   padding: 5px 10px 20px;

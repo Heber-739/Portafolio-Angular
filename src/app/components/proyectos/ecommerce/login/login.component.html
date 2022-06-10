@@ -1,5 +1,10 @@
 <app-header-ecommerce></app-header-ecommerce>
-<form class="container box form" [formGroup]="login">
+<form
+  class="container box form"
+  novalidate
+  [formGroup]="login"
+  *ngIf="!registrarse"
+>
   <h2>Iniciar Sesión</h2>
   <label for="correo"
     >Correo electrónico:
@@ -17,24 +22,166 @@
       login.get('correo')?.hasError('required') && login.get('correo')?.dirty
     "
   >
-    Correo</small
+    Campo obligatorio</small
   >
   <label for="password">
-    Contraseña:
+    Contrasena:
     <input
       id="password"
       class="input_text"
       type="password"
-      placeholder="Contraseña"
+      placeholder="Contrasena"
       autocomplete="off"
-      formControlName="contraseña"
+      formControlName="contrasena"
     />
   </label>
-  <button class="btn entrar" type="submit">Entrar</button>
+
+  <button
+    class="btn entrar"
+    type="submit"
+    (click)="entrar()"
+    [disabled]="login.invalid"
+  >
+    Entrar
+  </button>
 </form>
-<div class="container box div">
+
+<div class="container box div" *ngIf="!registrarse">
   <p>¿Aún no tienes una cuenta?</p>
-  <button class="btn">Registrarse</button>
+  <button class="btn" (click)="logUp()">Registrarse</button>
 </div>
+
+<!------------------- Registrarse-------------------------- -->
+<form
+  class="container box form"
+  novalidate
+  [formGroup]="logup"
+  *ngIf="registrarse"
+>
+  <h2>Registrarse</h2>
+  <label for="correo2"
+    >Correo electrónico:
+    <input
+      id="correo2"
+      class="input_text"
+      type="email"
+      placeholder="Correo electrónico"
+      autocomplete="off"
+      formControlName="correoDos"
+    />
+  </label>
+  <small
+    *ngIf="
+      logup.get('correoDos')?.hasError('email') && logup.get('correoDos')?.dirty
+    "
+  >
+    Email no valido</small
+  >
+  <label for="password2">
+    Contrasena:
+    <input
+      id="password2"
+      class="input_text"
+      type="password"
+      placeholder="Contrasena"
+      autocomplete="off"
+      formControlName="contrasenaDos"
+    />
+  </label>
+  <label for="passwordConfirm">
+    Repetir Contrasena:
+    <input
+      id="passwordConfirm"
+      class="input_text"
+      type="password"
+      placeholder="Confirmar contraseña"
+      autocomplete="off"
+      formControlName="confirmarContrasena"
+    />
+  </label>
+  <p
+    *ngIf="
+      logup.get('confirmarContrasena')?.hasError('required') &&
+      logup.get('confirmarContrasena')?.dirty
+    "
+  >
+    Campo obligatorio
+  </p>
+  <p *ngIf="logup.hasError('confirmacion')">Contraseñas no coinciden</p>
+
+  <p
+    *ngIf="
+      logup.get('contrasenaDos')?.hasError('required') &&
+      logup.get('contrasenaDos')?.dirty
+    "
+  >
+    Campo obligatorio
+  </p>
+
+  <p
+    *ngIf="
+      logup.get('contrasenaDos')?.hasError('haveSpace') &&
+      !logup.get('contrasenaDos')?.hasError('required')
+    "
+  >
+    Sin espacios
+  </p>
+
+  <p *ngIf="logup.get('contrasenaDos')?.hasError('maxlength')">
+    Hasta 16 caracteres
+  </p>
+
+  <div class="Requisitos">
+    <p
+      [ngStyle]="{
+        color:
+          logup.get('contrasenaDos')?.hasError('minlength') ||
+          logup.get('contrasenaDos')?.pristine ||
+          logup.get('contrasenaDos')?.hasError('required')
+            ? 'red'
+            : 'green'
+      }"
+    >
+      Mínimo 8 caracteres
+    </p>
+    <p
+      [style.color]="
+        logup.get('contrasenaDos')?.hasError('haveStringMin') ? 'red' : 'green'
+      "
+    >
+      Una minuscula
+    </p>
+    <p
+      [style.color]="
+        logup.get('contrasenaDos')?.hasError('haveNumber') ? 'red' : 'green'
+      "
+    >
+      Un número
+    </p>
+    <p
+      [style.color]="
+        logup.get('contrasenaDos')?.hasError('haveCharacter') ? 'red' : 'green'
+      "
+    >
+      Un caracter especial
+    </p>
+
+    <p
+      [style.color]="
+        logup.get('contrasenaDos')?.hasError('haveStringMay') ? 'red' : 'green'
+      "
+    >
+      Una mayuscula
+    </p>
+  </div>
+  <button
+    class="btn entrar"
+    type="submit"
+    (click)="registro()"
+    [disabled]="logup.invalid"
+  >
+    Registrarse
+  </button>
+</form>
 
 <app-footer-ecommerce></app-footer-ecommerce>
