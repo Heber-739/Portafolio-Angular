@@ -12,7 +12,8 @@
 
 .item {
   width: 10vw;
-  height: 12vw;
+  height: fit-content;
+  margin: 1vw 0;
   overflow: hidden;
 }
 
@@ -20,12 +21,9 @@
   display: flex;
   color: white;
   height: 100%;
-  flex-direction: row;
   align-items: center;
-  width: 8vw;
-}
-.ancho {
-  width: 25vw;
+  width: fit-content;
+  padding: 0 3px 0 0;
 }
 
 .img {
@@ -34,13 +32,13 @@
   height: 10vw;
   border-radius: 50%;
   background-color: var(--color5);
-  margin: 0 4px 0 0;
+  margin: 0 3px 0 0;
 }
 
 .item:hover,
 .item:active {
   animation: slide 3s ease-in-out;
-  border-radius: 15px;
+  border-radius: 15px 10px 10px 15px;
 }
 @keyframes slide {
   0% {
@@ -48,10 +46,10 @@
     background-color: var(--color5);
   }
   50% {
-    width: 32vw;
+    width: 34vw;
   }
-  70% {
-    width: 32vw;
+  80% {
+    width: 34vw;
   }
   99% {
     width: 10vw;
@@ -71,7 +69,7 @@
   right: 20px;
   top: 15vw;
   background: var(--color4);
-  z-index: 99;
+  z-index: 89;
 }
 
 .tema_default,

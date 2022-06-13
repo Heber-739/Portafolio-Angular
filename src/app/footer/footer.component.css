@@ -1,18 +1,19 @@
-footer {
+:host {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+.foot {
   width: 100vw;
   height: fit-content;
   background: var(--color4);
-  color: white;
-}
-.foot {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.foot a {
-  text-align: left;
+.link {
   color: white;
-  text-decoration: underline;
+  padding: 0 4px;
 }
 
 .foot p {
@@ -24,7 +25,14 @@ footer {
   box-sizing: border-box;
 }
 
-.git {
+.icon {
   background: white;
   border-radius: 50%;
+  width: calc(20px + 1vw);
+  padding: 1px;
+}
+.linkedin {
+  background: white;
+  width: calc(20px + 1vw);
+  border-radius: 2px;
 }

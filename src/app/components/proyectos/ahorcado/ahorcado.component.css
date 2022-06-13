@@ -1,5 +1,6 @@
 main {
   min-height: 55vh;
+  padding: 0 0 50px 0;
 }
 .container {
   width: fit-content;

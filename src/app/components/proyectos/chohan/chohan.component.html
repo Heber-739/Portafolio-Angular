@@ -64,6 +64,9 @@
     </div>
     <div class="apuestas box container">
       <div class="form_apuestas">
+        <p *ngIf="apuestasInput.invalid && apuestasInput.dirty">
+          Apuesta inválida
+        </p>
         <input
           type="number"
           placeholder="¿Cuánto apostará?"

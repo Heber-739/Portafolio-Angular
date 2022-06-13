@@ -1,10 +1,8 @@
-.container {
-  padding: 10px;
-}
 .box_skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 0 0 50px 0;
 }
 .skill {
   width: 45vw;
@@ -12,13 +10,15 @@
   background: var(--color5);
 }
 .skill p {
+  text-indent: 10px;
   padding: 5px;
 }
 .logo {
   float: left;
-  margin: 2px 5px 1px 2px;
-  padding: 2px 0px 0px;
-  height: 13vw;
+  margin: 4px 5px;
+  padding: 3px;
+  height: calc(48px + 1vw);
+  max-height: 80px;
   background: white;
   border: 1px solid black;
   border-radius: 5px;
