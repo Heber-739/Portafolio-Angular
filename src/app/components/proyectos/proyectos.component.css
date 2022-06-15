@@ -60,6 +60,7 @@
 .clickMe {
   background: var(--color3);
   height: calc(6vh + 1vw);
+  text-shadow: 1px 1px 1px black;
 }
 
 .visible {
