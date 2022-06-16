@@ -77,11 +77,11 @@ body {
   box-sizing: border-box;
 }
 .btn {
+  background: var(--color5);
   width: fit-content;
   color: white;
   font-size: calc(0.4rem + 2vw);
   font-weight: bold;
-  background: var(--color5);
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.55) 2.4px 2.4px 3.2px;
@@ -110,4 +110,33 @@ body {
 .ng-invalid.ng-dirty {
   border: 1px solid red;
   outline: 1px solid red;
+}
+/* ----- Estilos globales E-commerce ----- */
+.container_ec {
+  background: white;
+  padding: 10px 0 0;
+  font-family: "Cabin Condensed", sans-serif;
+  color: black;
+}
+
+.btn_ec {
+  background: var(--color6);
+  padding: 3px 7px;
+  margin: 10px 0px;
+  font-family: "Nerko One", cursive;
+  font-weight: lighter;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px black;
+  color: white;
+  border-radius: 5px;
+}
+.btn_ec:active {
+  box-shadow: inset rgba(0, 0, 0, 0.55) 2.4px 2.4px 3.2px;
+}
+.title_ec {
+  text-shadow: 1px 1px var(--color6);
+  text-decoration: underline 3px black;
+  font-family: "Nerko One", cursive;
+  font-weight: lighter;
+  color: #000;
 }

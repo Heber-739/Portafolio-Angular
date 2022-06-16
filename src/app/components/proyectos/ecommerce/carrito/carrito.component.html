@@ -1,10 +1,10 @@
 <app-header-ecommerce></app-header-ecommerce>
-<section>
+<section class="container_ec">
   <div class="change" *ngIf="!carritoVacio">
     <button
       type="button"
       *ngIf="!modificar"
-      class="btn"
+      class="btn_ec box"
       (click)="modificarUnidades()"
     >
       Cambiar Unidades
@@ -13,15 +13,15 @@
     <button
       type="button"
       *ngIf="modificar"
-      class="btn"
+      class="btn_ec box"
       (click)="modificarUnidades()"
     >
-      Echo
+      Hecho
     </button>
   </div>
   <div class="group">
     <div class="producto box" *ngFor="let i of productos; let in = index">
-      <h2 class="titulo">{{ i.nombre }}</h2>
+      <h2 class="title_ec">{{ i.nombre }}</h2>
       <img
         class="imagen_producto"
         src="{{ i.src }}"
@@ -32,16 +32,24 @@
           <p>Unidades: {{ cantidades[i.nombre] }}</p>
         </div>
         <div *ngSwitchCase="true" class="caja">
-          <button type="button" class="btn" (click)="cambiarUnidades(i, '-')">
+          <button
+            type="button"
+            class="btn_ec"
+            (click)="cambiarUnidades(i, '-')"
+          >
             -
           </button>
           <p class="precio_producto">{{ cantidades[i.nombre] }}</p>
-          <button type="button" class="btn" (click)="cambiarUnidades(i, '+')">
+          <button
+            type="button"
+            class="btn_ec"
+            (click)="cambiarUnidades(i, '+')"
+          >
             +
           </button>
         </div>
       </div>
-      <p class="total">
+      <p>
         Total: {{ montoTotal(i) | currency: "$":"symbol":"2.0"
         }}<span *ngIf="i.descuento"> -{{ i.descuento }}%</span>
       </p>
@@ -49,18 +57,18 @@
         type="button"
         *ngIf="modificar"
         (click)="eliminarProducto(in)"
-        class="btn"
+        class="btn_ec"
       >
         Eliminar
       </button>
     </div>
   </div>
-  <button type="button" *ngIf="!carritoVacio" class="btn">
+  <button type="button" *ngIf="!carritoVacio" class="btn_ec">
     Pagar productos
   </button>
   <div *ngIf="carritoVacio" class="carritoVacio">
-    <p class="titulo">Carrito Vacio</p>
-    <a class="btn" [routerLink]="['/proyectos', 'ecommerce', '']"
+    <p class="title_ec title_carrito_vacio">Carrito Vacio</p>
+    <a class="btn_ec box" [routerLink]="['/proyectos', 'ecommerce', '']"
       >Regresar al Home</a
     >
   </div>

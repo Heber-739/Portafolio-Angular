@@ -1,12 +1,11 @@
-section {
-  background-color: white;
-  padding: 0 0 20px;
+.container_ec {
+  padding: 10px 0 20px;
 }
 .change {
   display: flex;
   justify-content: flex-end;
 }
-.change button {
+.change .btn_ec {
   margin: 10px 20px 15px;
 }
 
@@ -28,24 +27,14 @@ section {
   padding: 5px 10px;
 }
 
-.titulo {
-  font-size: 1.3rem;
-  font-family: "Nerko One", cursive;
-  font-weight: lighter;
-  color: #000;
-  padding: 3px 0 12px;
-  width: 100%;
+.title_ec {
   text-align: center;
-  text-shadow: 1px 1px var(--color6);
-  text-decoration: underline 3px black;
+  font-size: 1.3rem;
+  margin: 3px auto 5px;
 }
 
 .imagen_producto {
   width: 150px;
-}
-p.precio_producto {
-  font-size: 1rem;
-  font-weight: bolder;
 }
 
 /* -------------------------------- */
@@ -56,36 +45,30 @@ p.precio_producto {
   justify-content: center;
 }
 p {
-  font-family: "Cabin Condensed", sans-serif;
-  text-indent: 0;
-  font-size: calc(0.8rem + 1vw);
+  font-size: 16px;
   color: white;
-  padding: 3px 2px;
+  padding: 3px 15px;
+  font-weight: bolder;
 }
 
-.btn {
-  background: var(--color6);
-  padding: 1px 7px;
-  margin: 5px 10px;
-  font-family: "Nerko One", cursive;
-  font-weight: lighter;
-  font-size: 1.2rem;
-  text-shadow: 1px 1px black;
-  box-shadow: 1px 1px 3px black;
-}
 .carritoVacio {
-  padding: 20px 40px;
-  height: 20vh;
-  font-size: 1rem;
   text-align: center;
+  margin: 50px auto;
+  height: fit-content;
 }
-.carritoVacio p {
-  font-size: 2.5rem;
-  padding: 20px 0;
-}
+
 span {
   font-size: 80%;
   padding: 15px 2px;
   color: yellow;
   font-weight: bolder;
+}
+.title_carrito_vacio {
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: lighter;
+}
+.carritoVacio a {
+  margin: 2px auto;
 }

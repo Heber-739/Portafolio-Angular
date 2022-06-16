@@ -1,8 +1,10 @@
 <app-header-ecommerce></app-header-ecommerce>
-<section>
-  <a class="link" [routerLink]="['/proyectos', 'ecommerce', '']">Volver</a>
+<section class="container_ec">
+  <a class="btn_ec box" [routerLink]="['/proyectos', 'ecommerce', '']"
+    >Volver</a
+  >
   <div class="producto box">
-    <h2 class="titulo">{{ producto.nombre }}</h2>
+    <h2 class="title_ec">{{ producto.nombre }}</h2>
     <figure>
       <img
         class="imagen_producto"
@@ -22,15 +24,19 @@
     <div class="descripcion">
       <p *ngFor="let i of producto.descripcion">- {{ i }}</p>
       <form>
-        <button type="button" (click)="nroPedidos('-')" class="btn">-</button>
+        <button type="button" (click)="nroPedidos('-')" class="btn_ec box">
+          -
+        </button>
         <input
           [formControl]="cantidadItems"
           class="nroItems input_text"
           type="number"
           min="1"
         />
-        <button type="button" (click)="nroPedidos('+')" class="btn">+</button>
-        <button type="button" (click)="agregarCarrito()" class="btn add">
+        <button type="button" (click)="nroPedidos('+')" class="btn_ec box">
+          +
+        </button>
+        <button type="button" (click)="agregarCarrito()" class="btn_ec box">
           Añadir al carrito
         </button>
       </form>
@@ -38,21 +44,21 @@
   </div>
 
   <div>
-    <div class="groups">
-      <div class="header">
-        <h2 class="titulo">Otros productos:</h2>
-      </div>
-    </div>
+    <h2 class="title_ec otros_productos">Otros productos:</h2>
     <figure
-      class="producto"
+      class="producto box sugerencias"
       *ngFor="let i of sugerencias"
       [routerLink]="['/proyectos', 'ecommerce', 'producto', i.id]"
     >
-      <img class="imagen_producto" src="{{ i.src }}" alt="Imagen {{ i.src }}" />
-      <figcaption>
-        <p class="descripcion_producto">{{ i.nombre }}</p>
-        <p class="precio_producto">${{ i.precio }}</p>
-        <p class="ver_producto">Ver Producto</p>
+      <img
+        class="imagen_otro_producto"
+        src="{{ i.src }}"
+        alt="Imagen {{ i.src }}"
+      />
+      <figcaption class="otros_productos_descripcion">
+        <p class="title_ec title_otros">{{ i.nombre }}</p>
+        <p class="p_otros">${{ i.precio }}</p>
+        <p class="p_otros">Ver Producto</p>
       </figcaption>
     </figure>
   </div>

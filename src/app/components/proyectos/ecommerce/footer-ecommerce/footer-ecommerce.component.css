@@ -1,7 +1,7 @@
 .footer {
   background: linear-gradient(180deg, #04bf9d, #027368);
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0 50px;
 }
 
 .logo_inferior {
@@ -10,11 +10,10 @@
 }
 .info_nav p {
   padding: 5px;
-  font-size: 0.9rem;
+  font-size: 12px;
   font-weight: bold;
-  text-shadow: 1px 1px var(--color6);
+  text-shadow: 1px 1px black;
   letter-spacing: 1px;
-  text-indent: 0;
 }
 .informacion {
   display: flex;
@@ -31,7 +30,6 @@
   color: rgba(255, 255, 255, 0.675);
   padding: 10px;
   width: 30vw;
-  text-indent: 0;
 }
 .info_nav a {
   color: rgb(255, 255, 255);
@@ -50,8 +48,6 @@
 }
 .contacto h2 {
   font-size: 2rem;
-  font-family: "Nerko One", cursive;
-  font-weight: lighter;
   color: #fff;
   padding: 10px;
   text-shadow: 1px 1px black;
@@ -60,16 +56,9 @@
 
 .label {
   width: fit-content;
-  margin: 0;
+  color: white;
   align-self: flex-start;
 }
 .input_text {
   outline: 2px solid var(--color6);
-}
-.btn {
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  font-family: "Nerko One", cursive;
-  font-weight: lighter;
-  background: var(--color6);
 }

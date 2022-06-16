@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 100vw;
   background: #04bf9d;
   height: 10vh;
   box-shadow: inset 0px -1px 3px black;
@@ -18,38 +18,19 @@
   outline: 2px solid var(--color6);
 }
 
-.icon_search:hover {
-  box-shadow: 1px 1px 3px black;
-  border-radius: 5px;
-}
-.button {
-  padding: 5px 15px;
-  font-family: "Nerko One", cursive;
-  font-weight: lighter;
-  font-size: 1.2rem;
-  background: var(--color6);
-  text-shadow: 1px 1px black;
-}
 .iconoBuscar {
   display: flex;
   align-self: center;
 }
-.caja {
-  border: 1px solid black;
-  border-radius: 6px;
-  box-shadow: 1px 1px 2px 1px black;
-  width: 32px;
-  padding: 5px;
-  background: var(--color6);
+.icon {
+  width: 40px;
 }
-.btn:active {
-  box-shadow: inset 1px 1px 5px 1px black;
-}
+
 .search {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80vw;
+  width: 70vw;
   position: relative;
 }
 .resultados {
@@ -75,6 +56,7 @@
   height: 23px;
 }
 .matches p {
+  font-size: 10px;
   color: black;
   height: fit-content;
 }
@@ -87,4 +69,6 @@
   background-color: #04bf9d;
   font-weight: bold;
   border-radius: 3px;
+  font-size: 13px;
+  padding: 5px 0;
 }

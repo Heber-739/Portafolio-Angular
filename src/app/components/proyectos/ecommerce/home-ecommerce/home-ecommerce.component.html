@@ -1,10 +1,10 @@
 <app-header-ecommerce [itemList]="itemList"></app-header-ecommerce>
-<main class="body">
+<main class="container_ec">
   <div class="slider" *ngIf="!verTodo">
     <div class="promocion">
       <h2>Mes Promocional</h2>
       <p>Productos seleccionados con hasta 40% de descuento</p>
-      <button type="button" class="btn box" (click)="verMas()">
+      <button type="button" class="btn_ec box" (click)="verMas()">
         Ver productos
       </button>
     </div>
@@ -22,8 +22,8 @@
   </div>
   <div *ngFor="let group of itemList">
     <div class="groups" [class.verTodo]="verTodo">
-      <div class="header">
-        <h2 class="titulo">{{ group.name }}</h2>
+      <div class="title_group">
+        <h2 class="title_ec">{{ group.name }}</h2>
         <div [ngSwitch]="verTodo">
           <a class="link" *ngSwitchCase="false" (click)="verMas()">Ver Todo</a>
           <a class="link" *ngSwitchCase="true" (click)="verMas()">Volver</a>

@@ -1,36 +1,46 @@
+.container_ec {
+  padding: 40px 0 20px;
+}
 .form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: fit-content;
-  margin: 50px auto 30px;
+  margin: 0 auto 0;
   width: 75vw;
-  padding: 5px 10px 20px;
+  padding: 5px 10px 5px;
+  color: white;
+  background: linear-gradient(180deg, #04bf9d, #027368);
 }
-h2 {
+.requisitos p {
+  font-size: 16px;
+  font-weight: bolder;
+  text-shadow: 1px 1px black;
+  margin-top: 5px;
+}
+.title_ec {
   font-size: 1.8rem;
-  font-weight: lighter;
-  font-family: "Nerko One", cursive;
-  text-decoration: underline;
+  padding: 5px 0 15px;
 }
-.btn {
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  font-family: "Nerko One", cursive;
-  font-weight: lighter;
-}
+
 label {
   width: 80%;
-  font-size: 0.8rem;
+  margin: 3px 0 0;
 }
 .input_text {
+  margin: 5px 0 0;
   width: 100%;
   height: 35px;
+  outline: 2px solid var(--color6);
 }
 
 .div {
   width: fit-content;
-  padding: 10px 25px 20px;
-  margin: 10px auto 80px;
+  padding: 10px 15px 5px;
+  margin: 20px auto 0;
+}
+.title_dos {
+  font-size: 22px;
+  padding: 0 0 5px;
 }

@@ -1,6 +1,6 @@
 [
     {
-        "name": "StarWars",
+        "name": "Star Wars",
         "array": [
             {
                 "nombre": "Muñeco Ben Solo",
@@ -15,11 +15,12 @@
                 ]
             },
             {
-                "nombre": "Lego Darth Blazer + Piloto de caza",
+                "nombre": "Combo Lego Star Wars",
                 "precio": "1669",
                 "src": "assets/ecommerce/img/Lego_DarthBlazer_PilotoCaza.png",
                 "id": "0002",
                 "descripcion": [
+                    "Darth Blazer + Piloto de caza",
                     "Edad: +18 años",
                     "Altura: 20cm",
                     "Instrucciones incluidas",
@@ -185,7 +186,7 @@
                 ]
             },
             {
-                "nombre": "PlayStation4_control",
+                "nombre": "Control PlayStation4",
                 "precio": "59",
                 "src": "assets/ecommerce/img/PlayStation4_control.png",
                 "id": "2003",

@@ -8,6 +8,7 @@
   padding: 4px 0px;
   justify-content: space-evenly;
   background: var(--color4);
+  box-shadow: 0px -8px 10px -10px rgba(0, 0, 0, 0.75) inset;
 }
 
 .item {
