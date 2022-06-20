@@ -22,7 +22,10 @@
       <a class="ver_todo">Ver Todo</a>
     </div>
   </form>
-  <a *ngIf="!buscador" (click)="redirigir('login')" class="btn_ec box">Login</a>
+  <div *ngIf="!buscador">
+    <a *ngIf="!login" (click)="redirigir('login')" class="btn_ec box">Login</a>
+    <a *ngIf="login" (click)="logout()" class="btn_ec box">Logout</a>
+  </div>
   <img
     src="assets/ecommerce/img/carrito.svg"
     alt="carrito"

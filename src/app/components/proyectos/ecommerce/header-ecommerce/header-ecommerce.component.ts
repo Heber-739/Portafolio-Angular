@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../login/Auth-Service.service';
 
 @Component({
   selector: 'app-header-ecommerce',
@@ -9,21 +10,29 @@ import { Router } from '@angular/router';
 })
 export class HeaderEcommerceComponent implements OnInit {
   @Input() itemList: any;
+  login: boolean = false;
   buscador: boolean = false;
   item: any;
   searchInput = new FormControl('', [Validators.required]);
   matches: any[];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
   ngOnInit(): void {
     this.searchInput.valueChanges.subscribe((value) => {
       this.search(value);
     });
+
+    this.login = this.authService.isLoggedMethod();
+
+    this.authService.loginStatus$.subscribe((loggedStatus: boolean) => {
+      this.login = loggedStatus;
+    });
   }
 
-  ngAfterViewInit(): void {}
-
   redirigir(path: string) {
+    if (path == 'login') {
+      this.authService.urlIntentaAcceder = this.router.url;
+    }
     this.router.navigate(['proyectos', 'ecommerce', path]);
   }
 
@@ -46,5 +55,8 @@ export class HeaderEcommerceComponent implements OnInit {
     }
     console.log(newItemList);
     this.matches = newItemList;
+  }
+  logout() {
+    this.authService.logout();
   }
 }

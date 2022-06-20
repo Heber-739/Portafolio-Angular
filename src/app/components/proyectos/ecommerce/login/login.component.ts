@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LocalStorageService } from 'src/app/local-storage.service';
+import { AuthService } from './Auth-Service.service';
 import { confirmacion, MisValidadores } from './misValidadores';
 
 @Component({
@@ -9,6 +12,9 @@ import { confirmacion, MisValidadores } from './misValidadores';
 })
 export class LoginComponent implements OnInit {
   registrarse: boolean = false;
+  loginStatus: string = '';
+  mensajeLogin: boolean = false;
+  isLogged: boolean = false;
   login = new FormGroup({
     correo: new FormControl('', [Validators.required, Validators.email]),
     contrasena: new FormControl('', [Validators.required]),
@@ -32,17 +38,50 @@ export class LoginComponent implements OnInit {
     confirmacion
   );
 
-  constructor() {}
+  constructor(
+    private authService: AuthService,
+    private localS: LocalStorageService
+  ) {}
 
-  ngOnInit(): void {}
-  pagarProductos() {}
+  ngOnInit(): void {
+    this.isLogged = this.authService.isLoggedMethod();
+  }
   logUp() {
     this.registrarse = !this.registrarse;
   }
   entrar() {
-    console.log('entro');
+    let user: any = this.localS.get('login');
+    let form: string[] = [
+      this.login.get('correo')?.value,
+      this.login.get('contrasena')?.value,
+    ];
+    this.mensajeLogin = true;
+    if (user.length > 1) {
+      if (form[0] === user[0] && form[1] === form[1]) {
+        this.mensajeLogin = false;
+        this.authService.login();
+      } else if (form[0] !== user[0]) {
+        this.loginStatus = 'Correo Incorrecto';
+        if (form[1] !== user[1]) {
+          this.loginStatus = 'Correo y contraseña incorrectas';
+        }
+      } else {
+        if (form[1] !== user[1]) {
+          this.loginStatus = 'Contraseña incorrectas';
+        }
+      }
+    } else if (user.length == 0) {
+      this.loginStatus = 'Usuario no encontrado';
+    }
   }
-  registro() {
-    console.log('seRegistro');
+  nuevoRegistro() {
+    localStorage.setItem(
+      'login',
+      JSON.stringify([
+        this.logup.get('correoDos')?.value,
+        this.logup.get('contrasenaDos')?.value,
+      ])
+    );
+    this.logUp();
   }
 }

@@ -44,3 +44,22 @@ label {
   font-size: 22px;
   padding: 0 0 5px;
 }
+small {
+  margin: 3px auto;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  height: fit-content;
+}
+.title_yaRegistrado {
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: lighter;
+}
+.login a {
+  margin: 2px auto;
+}

@@ -63,9 +63,24 @@
       </button>
     </div>
   </div>
-  <button type="button" *ngIf="!carritoVacio" class="btn_ec">
-    Pagar productos
-  </button>
+  <div *ngIf="!carritoVacio">
+    <button
+      type="button"
+      *ngIf="isLogged"
+      class="btn_ec"
+      [routerLink]="['/proyectos', 'ecommerce', 'user']"
+    >
+      Pagar productos
+    </button>
+    <button
+      type="button"
+      *ngIf="!isLogged"
+      class="btn_ec"
+      (click)="registrarse()"
+    >
+      Registrarse para continuar
+    </button>
+  </div>
   <div *ngIf="carritoVacio" class="carritoVacio">
     <p class="title_ec title_carrito_vacio">Carrito Vacio</p>
     <a class="btn_ec box" [routerLink]="['/proyectos', 'ecommerce', '']"

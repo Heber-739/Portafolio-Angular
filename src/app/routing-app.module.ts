@@ -10,6 +10,8 @@ import { EncriptadorComponent } from './components/proyectos/encriptador/encript
 import { ClipboardModule } from 'ngx-clipboard';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PreloadModuleService } from './preload-module.service';
+import { LocalStorageService } from './local-storage.service';
+import { TemasService } from './temas.service';
 
 const appRouts: Routes = [
   { path: '', component: HomeComponent },
@@ -61,5 +63,6 @@ const appRouts: Routes = [
     }),
   ],
   exports: [RouterModule],
+  providers: [LocalStorageService, TemasService],
 })
 export class RoutingAppModule {}

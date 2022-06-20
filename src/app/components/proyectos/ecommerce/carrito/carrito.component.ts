@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LocalStorageService } from 'src/app/local-storage.service';
+import { AuthService } from '../login/Auth-Service.service';
 
 @Component({
   selector: 'app-carrito',
@@ -11,10 +13,18 @@ export class CarritoComponent implements OnInit {
   productos: any;
   cantidades: any;
   carritoVacio: boolean = false;
-  constructor(private localS: LocalStorageService) {}
+  isLogged: boolean = false;
+  constructor(
+    private localS: LocalStorageService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.iniciar();
+    this.authService.loginStatus$.subscribe((loggedStatus: boolean) => {
+      this.isLogged = loggedStatus;
+    });
   }
 
   iniciar() {
@@ -34,7 +44,7 @@ export class CarritoComponent implements OnInit {
     }, {});
 
     this.productos = productosCarrito;
-
+    this.isLogged = this.authService.isLoggedMethod();
     this.cantidades = cantidadesObj;
   }
   montoTotal(i: any) {
@@ -62,5 +72,9 @@ export class CarritoComponent implements OnInit {
     if (this.productos.length == 0) {
       this.carritoVacio = true;
     }
+  }
+  registrarse() {
+    this.authService.urlIntentaAcceder = '/proyectos/ecommerce/carrito';
+    this.router.navigate(['/proyectos', 'ecommerce', 'login']);
   }
 }

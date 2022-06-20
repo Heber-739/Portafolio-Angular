@@ -1,5 +1,5 @@
 <app-header-ecommerce></app-header-ecommerce>
-<section class="container_ec">
+<section class="container_ec" *ngIf="!isLogged">
   <form class="box form" novalidate [formGroup]="login" *ngIf="!registrarse">
     <h2 class="title_ec">Iniciar Sesión</h2>
     <label for="correo"
@@ -31,6 +31,7 @@
         formControlName="contrasena"
       />
     </label>
+    <small *ngIf="mensajeLogin">{{ loginStatus }}</small>
 
     <button
       class="btn_ec box"
@@ -175,12 +176,18 @@
     <button
       class="btn_ec box"
       type="submit"
-      (click)="registro()"
+      (click)="nuevoRegistro()"
       [disabled]="logup.invalid"
     >
       Registrarse
     </button>
   </form>
+</section>
+<section class="login container_ec" *ngIf="isLogged">
+  <p class="title_ec title_yaRegistrado">Ya inició sesión</p>
+  <a class="btn_ec box" [routerLink]="['/proyectos', 'ecommerce', '']"
+    >Regresar a Inicio</a
+  >
 </section>
 
 <app-footer-ecommerce></app-footer-ecommerce>
