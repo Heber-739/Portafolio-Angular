@@ -23,7 +23,6 @@ export class HeaderEcommerceComponent implements OnInit {
     });
 
     this.login = this.authService.isLoggedMethod();
-
     this.authService.loginStatus$.subscribe((loggedStatus: boolean) => {
       this.login = loggedStatus;
     });
@@ -53,7 +52,6 @@ export class HeaderEcommerceComponent implements OnInit {
         }
       }
     }
-    console.log(newItemList);
     this.matches = newItemList;
   }
   logout() {

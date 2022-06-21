@@ -7,39 +7,33 @@ import { Subject } from 'rxjs';
 })
 export class AuthService {
   private isLogged: boolean = false;
-  constructor(private router: Router) {
-    if (
-      localStorage.getItem('loginStatus')?.length == 0 ||
-      localStorage.getItem('loginStatus') == 'false'
-    ) {
-      this.isLogged = false;
-    } else {
-      this.isLogged = true;
-    }
-  }
-  public urlIntentaAcceder: string = '';
-
   public loginStatusSubject = new Subject<boolean>();
   public loginStatus$ = this.loginStatusSubject.asObservable();
+  public urlIntentaAcceder: string = '/proyectos/ecommerce';
+
+  constructor(private router: Router) {}
 
   isLoggedMethod(): boolean {
+    let localS = JSON.parse(localStorage.getItem('loginStatus') || '[]');
+    if (localS == false || localS.length == 0) {
+      this.isLogged = false;
+    } else if (localS) {
+      this.isLogged = true;
+    }
+    this.loginStatusSubject.next(this.isLogged);
     return this.isLogged;
   }
 
   login() {
     this.isLogged = true;
-    localStorage.setItem('loginStatus', 'true');
+    localStorage.setItem('loginStatus', JSON.stringify(this.isLogged));
     this.loginStatusSubject.next(true);
     this.router.navigate([this.urlIntentaAcceder]);
-    this.urlIntentaAcceder = '';
+    this.urlIntentaAcceder = '/proyectos/ecommerce';
   }
   logout() {
     this.isLogged = false;
     this.loginStatusSubject.next(false);
-    localStorage.setItem('loginStatus', 'false');
-  }
-  isLoggedIn(url: string) {
-    this.urlIntentaAcceder = url;
-    return this.isLogged;
+    localStorage.setItem('loginStatus', JSON.stringify(this.isLogged));
   }
 }

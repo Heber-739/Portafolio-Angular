@@ -51,13 +51,16 @@ export class LoginComponent implements OnInit {
   }
   entrar() {
     let user: any = this.localS.get('login');
+
     let form: string[] = [
       this.login.get('correo')?.value,
       this.login.get('contrasena')?.value,
     ];
+    console.log(user);
+    console.log(form);
     this.mensajeLogin = true;
     if (user.length > 1) {
-      if (form[0] === user[0] && form[1] === form[1]) {
+      if (form[0] === user[0] && form[1] === user[1]) {
         this.mensajeLogin = false;
         this.authService.login();
       } else if (form[0] !== user[0]) {
