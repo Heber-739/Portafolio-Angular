@@ -14,14 +14,14 @@
         <input
           type="text"
           placeholder="¿Cuál es tu nombre?"
-          class="input_text input"
+          class="input_text"
           autocomplete="off"
           [formControl]="nameInput"
         />
         <input
           type="number"
           placeholder="Shibas a apostar"
-          class="input_text input"
+          class="input_text"
           min="1"
           autocomplete="off"
           [formControl]="billeteraInput"
@@ -35,7 +35,7 @@
           Start!
         </button>
       </form>
-      <div *ngIf="!visible">
+      <div *ngIf="!visible" class="div_mensajes">
         <div [ngSwitch]="switchMensaje">
           <p class="text" *ngSwitchCase="'bienvenida'">
             Bienvenido {{ nombre }},<br />Apuesta y Gana!

@@ -4,24 +4,17 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  margin: 10px auto;
+  margin: 3vw auto 4vw;
 }
 .picture {
-  height: 25vw;
-  width: 25vw;
+  height: clamp(78px, 25vw, 120px);
+  width: clamp(78px, 25vw, 120px);
   border-radius: 50%;
-  box-shadow: 0px 0px 15px var(--color5);
+  box-shadow: 0px 0px 14px var(--color5);
 }
-.title {
-  margin: 10px 15px;
-  width: fit-content;
-  font-size: 9vw;
-  font-family: "Akaya Telivigala", cursive;
-  font-weight: lighter;
-  border-bottom: 2px solid white;
-}
-.box2 {
-  width: 95%;
+
+.box2 p {
+  margin: 0 auto;
 }
 
 /* ---------- Cards ---------- */
@@ -35,7 +28,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: calc(280px + 7vw);
+  width: clamp(300px, 95vw, 350px);
   margin: 0px auto 15px;
   background: var(--color5);
 }
@@ -64,7 +57,7 @@
   display: block;
   font-weight: bolder;
   text-align: center;
-  padding: 8px 0px;
+  padding: 8px 0;
   margin: 0 auto;
   font-size: calc(0.8rem + 0.2vw);
 }
@@ -72,8 +65,60 @@
   width: 90%;
   margin: 5px 0 0;
   padding: 5px 10px 15px;
-  font-size: calc(0.8rem + 0.2vw);
+  font-size: calc(8px + 1vw);
 }
 .card_textOne {
   width: 70%;
+}
+@media screen and (min-width: 1024px) {
+  :host {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  .container {
+    width: 450px;
+  }
+  .box1 {
+    width: 95%;
+    margin: 0 0 10px;
+  }
+  .picture {
+    height: 105px;
+    width: 105px;
+    box-shadow: 0px 0px 20px var(--color5);
+  }
+  .alura,
+  .oracle {
+    height: 40px;
+  }
+  .programs {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 30px;
+  }
+  .card {
+    width: 500px;
+    margin: 5px auto;
+  }
+  .cards_title {
+    padding: 5px 0 8px;
+    margin: 0 auto;
+    font-size: 22px;
+  }
+  .card_text {
+    width: 95%;
+    margin: 8px 5px;
+    padding: 0;
+    font-size: 15px;
+  }
+  .card_textOne {
+    width: 80%;
+  }
+  .logo {
+    margin: 4px 5px 0px;
+    width: 25%;
+  }
 }

@@ -7,4 +7,14 @@
 p {
   margin: 10px auto;
   width: 50%;
+  text-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .title_ec {
+    font-size: 42px;
+  }
+  p {
+    font-size: 24px;
+    margin: 40px auto;
+  }
 }

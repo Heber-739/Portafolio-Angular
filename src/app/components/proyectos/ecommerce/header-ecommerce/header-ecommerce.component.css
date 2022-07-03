@@ -4,12 +4,14 @@
   justify-content: space-around;
   width: 100vw;
   background: #04bf9d;
-  height: 10vh;
+  height: clamp(45px, 10vh, 70px);
+  padding: 5px 0;
   box-shadow: inset 0px -1px 3px black;
 }
 
 .logo_geek {
-  height: 7vh;
+  height: clamp(35px, 7vh, 65px);
+  cursor: pointer;
 }
 .input {
   margin: 0 10px;
@@ -23,6 +25,7 @@
   align-self: center;
 }
 .icon {
+  margin: 0;
   width: 40px;
 }
 
@@ -30,13 +33,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70vw;
+  width: clamp(210px, 70vw, 350px);
   position: relative;
 }
 .resultados {
   position: absolute;
   width: 100%;
-  top: 35px;
+  top: 37px;
+  border-radius: 3px;
   height: fit-content;
   z-index: 99;
   background: whitesmoke;
@@ -47,7 +51,7 @@
   justify-content: space-between;
   width: inherit;
   height: 30px;
-  margin: 2px 0;
+  margin: 0 0 5px;
   padding: 0px 5px;
   border: 2px solid #04bf9d;
   border-radius: 3px;
@@ -56,9 +60,11 @@
   height: 23px;
 }
 .matches p {
+  text-shadow: none;
   font-size: 10px;
   color: black;
   height: fit-content;
+  font-weight: bold;
 }
 .ver_todo {
   width: 100%;
@@ -71,4 +77,84 @@
   border-radius: 3px;
   font-size: 13px;
   padding: 5px 0;
+}
+@media screen and (min-width: 768px) {
+  .cabecera {
+    height: fit-content;
+  }
+  .logo_geek {
+    height: 65px;
+  }
+  .iconoBuscar {
+    display: none;
+  }
+  .btn_ec {
+    font-size: 1.3rem;
+    padding: 7px 10px;
+  }
+  .icon {
+    height: 42px;
+    width: auto;
+  }
+  .input {
+    height: 42px;
+  }
+  .matches {
+    height: 45px;
+    margin: 0 0 8px;
+    padding: 0px 7px;
+    border-radius: 5px;
+  }
+  .matches img {
+    height: 30px;
+  }
+  .matches p {
+    font-size: 13px;
+  }
+  .ver_todo {
+    text-shadow: 2px 2px var(--color6);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cabecera {
+    height: fit-content;
+    padding: 5px 15vw;
+  }
+  .logo_geek {
+    height: 55px;
+  }
+
+  .btn_ec {
+    font-size: 18px;
+    padding: 5px 8px;
+  }
+  .icon {
+    height: 35px;
+    cursor: pointer;
+  }
+  .input {
+    height: 35px;
+  }
+  .matches {
+    height: 45px;
+    margin: 0 0 8px;
+    padding: 0px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .matches img {
+    height: 30px;
+  }
+  .matches p {
+    font-size: 13px;
+  }
+  .ver_todo {
+    text-shadow: 2px 2px var(--color6);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px 0;
+  }
 }

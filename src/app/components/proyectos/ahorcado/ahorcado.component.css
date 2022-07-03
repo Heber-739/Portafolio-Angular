@@ -8,19 +8,24 @@ main {
 }
 
 .container p {
+  width: 60%;
+  text-align: center;
   padding: 15px 10px 10px;
 }
 .form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: clamp(250px, 75vw, 500px);
+  margin: 0 auto;
 }
 
 .input_text {
-  width: 85vw;
+  width: 100%;
   height: 40px;
   margin: 10px auto;
 }
+
 .input {
   width: 100px;
   text-align: center;
@@ -61,4 +66,17 @@ main {
   padding: 0;
   border-radius: 20px;
   background: linear-gradient(-45deg, #dbfaf1, #b1f7e2);
+}
+@media screen and (orientation: landscape) {
+  main {
+    min-height: 93vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 15px auto 3px;
+  }
+  .btn {
+    font-size: 18px;
+  }
 }

@@ -55,6 +55,9 @@
   </div>
 
   <!------------------- Registrarse-------------------------- -->
+  <a class="btn_ec box volver_login" *ngIf="registrarse" (click)="logUp()"
+    >Volver al Login</a
+  >
   <form class="box form" novalidate [formGroup]="logup" *ngIf="registrarse">
     <h2 class="title_ec">Registrarse</h2>
     <label for="correo2"
@@ -189,7 +192,7 @@
     </button>
   </form>
 </section>
-<section class="login container_ec" *ngIf="isLogged">
+<section class="login container_ec loggin" *ngIf="isLogged">
   <p class="title_ec title_yaRegistrado">Ya inició sesión</p>
   <a class="btn_ec box" [routerLink]="['/proyectos', 'ecommerce', '']"
     >Regresar a Inicio</a

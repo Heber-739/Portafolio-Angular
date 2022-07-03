@@ -18,7 +18,7 @@ span {
 
 .slider {
   position: relative;
-  width: 70vw;
+  width: clamp(190px, 70vw, 400px);
   height: fit-content;
   overflow: hidden;
   margin: 0 auto;
@@ -110,6 +110,7 @@ span {
 .groups {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   height: 300px;
   margin: 10px auto;
   overflow: hidden;
@@ -119,6 +120,9 @@ span {
   width: 150px;
   margin: 10px auto;
   cursor: pointer;
+}
+.producto p {
+  text-shadow: none;
 }
 .producto:hover {
   transform: scale(1.05);
@@ -139,4 +143,18 @@ p.precio_producto {
   text-align: center;
   text-decoration: underline;
   color: var(--color6);
+}
+@media screen and (min-width: 768px) {
+  .promocion h2 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1px 0 4px;
+  }
+  .promocion p {
+    font-size: 1.4rem;
+    padding: 3px 0px;
+  }
+  .producto {
+    margin: 10px 8px;
+  }
 }

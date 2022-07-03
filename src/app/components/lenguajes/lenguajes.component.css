@@ -5,21 +5,50 @@
   padding: 0 0 50px 0;
 }
 .skill {
-  width: 45vw;
-  margin: 5px auto;
+  position: relative;
+  width: clamp(145px, 43vw, 210px);
+  margin: 5px 5px;
+  margin-top: calc(20px + 1.5vw);
   background: var(--color5);
 }
 .skill p {
+  width: 90%;
+  margin: 5px auto;
+  font-size: calc(8px + 1vw);
+  margin-top: calc(45px + 1.5vw);
   text-indent: 10px;
-  padding: 5px;
 }
 .logo {
-  float: left;
-  margin: 4px 5px;
-  padding: 3px;
-  height: calc(48px + 1vw);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10%;
+  margin: auto;
+  padding: 5px 10px;
+  height: calc(50px + 1.5vw);
   max-height: 80px;
   background: white;
   border: 1px solid black;
   border-radius: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 750px;
+    margin: 10px auto 0;
+  }
+  .box_skills {
+    padding-bottom: 45px;
+  }
+  .skill {
+    width: 300px;
+    margin: 0 10px;
+    margin-top: calc(20px + 1.5vw);
+  }
+  .skill p {
+    width: 90%;
+    margin: 5px auto;
+    font-size: 14px;
+    margin-top: calc(45px + 1.5vw);
+    text-indent: 10px;
+  }
 }

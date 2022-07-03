@@ -1,5 +1,5 @@
 .container_ec {
-  padding: 40px 0 20px;
+  padding: 10px 0 20px;
 }
 .form {
   display: flex;
@@ -7,8 +7,8 @@
   justify-content: space-around;
   align-items: center;
   height: fit-content;
-  margin: 0 auto 0;
-  width: 75vw;
+  margin: 10px auto 10px;
+  width: clamp(210px, 75vw, 450px);
   padding: 5px 10px 5px;
   color: white;
   background: linear-gradient(180deg, #04bf9d, #027368);
@@ -20,7 +20,7 @@
   margin-top: 5px;
 }
 .title_ec {
-  font-size: 1.8rem;
+  font-size: 28px;
   padding: 5px 0 15px;
 }
 
@@ -44,6 +44,9 @@ label {
   font-size: 22px;
   padding: 0 0 5px;
 }
+.volver_login {
+  margin: 0 0 10px 10px;
+}
 small {
   margin: 3px auto;
 }
@@ -62,4 +65,47 @@ small {
 }
 .login a {
   margin: 2px auto;
+}
+.loggin {
+  padding: 70px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .requisitos p {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .title_ec {
+    font-size: 38px;
+    padding: 5px 0 15px;
+  }
+  label {
+    font-size: 18px;
+    margin: 7px 0 0;
+  }
+  .input_text {
+    margin: 8px 0 0;
+    height: 45px;
+  }
+  .container_ec {
+    padding: 20px 0 20px;
+  }
+  .form {
+    margin-top: 20px;
+  }
+  .loggin {
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container_ec {
+    padding: 15px 0 25px;
+  }
+  .form {
+    margin: 0 auto 10px;
+  }
+
+  .title_dos {
+    font-size: 28px;
+  }
 }

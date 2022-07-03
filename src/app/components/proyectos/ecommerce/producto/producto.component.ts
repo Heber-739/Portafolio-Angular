@@ -12,6 +12,7 @@ export class ProductoComponent implements OnInit {
   producto: any;
   sugerencias: any;
   cantidadItems = new FormControl(1, [Validators.required]);
+  popup: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private localS: LocalStorageService
@@ -34,6 +35,10 @@ export class ProductoComponent implements OnInit {
     for (let index = 0; index < this.cantidadItems.value; index++) {
       this.localS.addItem('carrito', this.producto);
     }
+    this.popup = !this.popup;
+    setTimeout(() => {
+      this.popup = !this.popup;
+    }, 1500);
   }
   nroPedidos(operacion: string) {
     let numero: number = this.cantidadItems.value;

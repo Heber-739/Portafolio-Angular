@@ -4,15 +4,14 @@
 .change {
   display: flex;
   justify-content: flex-end;
-}
-.change .btn_ec {
-  margin: 10px 20px 15px;
+  margin: 0 20px 10px 0;
 }
 
 .group {
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
+  justify-content: space-around;
 }
 
 .producto {
@@ -21,8 +20,8 @@
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(180deg, #04bf9d, #027368);
-  margin: 0 auto 10px;
-  width: 190px;
+  margin: 0 10px 20px;
+  width: 180px;
   height: auto;
   padding: 5px 10px;
 }
@@ -30,25 +29,29 @@
 .title_ec {
   text-align: center;
   font-size: 1.3rem;
-  margin: 3px auto 5px;
+  margin: 3px auto 7px;
 }
 
 .imagen_producto {
   width: 150px;
+  margin-bottom: 5px;
 }
 
 /* -------------------------------- */
 .caja {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
+
 p {
   font-size: 16px;
   color: white;
   padding: 3px 15px;
   font-weight: bolder;
+}
+.delete {
+  margin: 0 0 10px;
 }
 
 .carritoVacio {
@@ -65,12 +68,36 @@ span {
   color: yellow;
   font-weight: bolder;
 }
+.registrarse {
+  margin-left: 15px;
+}
 .title_carrito_vacio {
   color: black;
-  font-size: 2.5rem;
+  font-size: calc(16px + 8vw);
   margin-bottom: 30px;
   font-weight: lighter;
 }
 .carritoVacio a {
   margin: 2px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .producto {
+    width: 210px;
+  }
+
+  .title_ec {
+    font-size: 24px;
+    margin: 3px auto 10px;
+  }
+  .title_carrito_vacio {
+    font-size: calc(14px + 5vw);
+  }
+
+  .imagen_producto {
+    width: 175px;
+  }
+  .producto p {
+    font-size: 20px;
+  }
 }

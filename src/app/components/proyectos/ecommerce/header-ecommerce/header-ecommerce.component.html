@@ -1,11 +1,15 @@
 <header class="cabecera">
-  <a (click)="redirigir('')" *ngIf="!buscador"
+  <a (click)="redirigir('')" *ngIf="logo"
     ><img
       class="logo_geek"
       src="assets/ecommerce/img/logo.svg"
       alt="Logo del e-commerce"
   /></a>
-  <form *ngIf="buscador" class="search">
+  <form
+    *ngIf="buscador"
+    class="search"
+    (keydown.enter)="$event.preventDefault()"
+  >
     <input
       type="text"
       placeholder="Buscar articulo"
@@ -14,15 +18,19 @@
       [formControl]="searchInput"
     />
     <div class="resultados" *ngIf="searchInput.valid && searchInput.dirty">
-      <div class="matches" *ngFor="let i of matches">
+      <div
+        class="matches"
+        *ngFor="let i of matches"
+        [routerLink]="['/proyectos', 'ecommerce', 'producto', i.id]"
+      >
         <img src="{{ i.src }}" alt="{{ i.nombre }}" />
         <p>{{ i.nombre }}</p>
         <p>${{ i.precio }}</p>
       </div>
-      <a class="ver_todo">Ver Todo</a>
+      <a class="ver_todo" (click)="redirigir('')">Ver más... </a>
     </div>
   </form>
-  <div *ngIf="!buscador">
+  <div *ngIf="loginContainer">
     <a *ngIf="!login" (click)="redirigir('login')" class="btn_ec box">Login</a>
     <a *ngIf="login" (click)="logout()" class="btn_ec box">Logout</a>
   </div>
@@ -32,16 +40,16 @@
     class="box btn_ec icon"
     (click)="redirigir('carrito')"
   />
-  <div [ngSwitch]="buscador" class="iconoBuscar">
+  <div [ngSwitch]="iconSearch" class="iconoBuscar">
     <img
-      *ngSwitchCase="false"
+      *ngSwitchCase="true"
       class="btn_ec box icon"
       src="assets/ecommerce/img/search.png"
       alt="Logo Buscador"
       (click)="openSearch()"
     />
     <img
-      *ngSwitchCase="true"
+      *ngSwitchCase="false"
       class="btn_ec box icon"
       src="assets/ecommerce/img/searchX.png"
       alt="Logo Buscador"

@@ -57,7 +57,7 @@
         type="button"
         *ngIf="modificar"
         (click)="eliminarProducto(in)"
-        class="btn_ec"
+        class="btn_ec delete"
       >
         Eliminar
       </button>
@@ -75,7 +75,7 @@
     <button
       type="button"
       *ngIf="!isLogged"
-      class="btn_ec"
+      class="btn_ec registrarse"
       (click)="registrarse()"
     >
       Registrarse para continuar

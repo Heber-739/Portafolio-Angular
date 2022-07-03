@@ -1,10 +1,11 @@
 :host {
   position: fixed;
   bottom: 0;
-  z-index: 999;
+  z-index: 99;
 }
 .foot {
   width: 100vw;
+  box-sizing: border-box;
   height: fit-content;
   background: var(--color4);
   display: flex;
@@ -35,4 +36,28 @@
   background: white;
   width: calc(20px + 1vw);
   border-radius: 2px;
+}
+@media screen and (orientation: landscape) {
+  :host {
+    position: relative;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :host {
+    position: fixed;
+  }
+  .foot {
+    padding: 0 25vw;
+  }
+  .foot p {
+    font-size: 16px;
+    margin: 3px;
+  }
+  .icon {
+    width: 30px;
+    padding: 1px;
+  }
+  .linkedin {
+    width: 30px;
+  }
 }

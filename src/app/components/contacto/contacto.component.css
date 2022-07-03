@@ -5,12 +5,8 @@ main {
   width: 100%;
   padding: 0px 10px;
 }
-.titulo {
-  width: fit-content;
-  font-size: 7vw;
-  font-family: "Akaya Telivigala", cursive;
-  border-bottom: 2px solid white;
-  margin: 3px auto 10px;
+.title {
+  margin: 0 auto 10px;
 }
 
 .contact_content {
@@ -27,7 +23,7 @@ main {
   margin: 0 auto 10px;
   align-items: center;
   width: 100%;
-  font-size: calc(0.4rem + 1.2vw);
+  font-size: calc(8px + 1.5vw);
 }
 .label {
   padding: 2px;
@@ -44,7 +40,7 @@ label[for="message"] {
   grid-area: b;
 }
 .mensaje {
-  height: 90%;
+  height: 100%;
   grid-area: e;
 }
 .email {
@@ -52,22 +48,64 @@ label[for="message"] {
 }
 .btn {
   width: 85%;
+  height: 40%;
+  padding: 0;
   grid-area: c;
-  padding: 10px 2px;
 }
 
 .formulario {
-  width: 80vw;
+  width: 300px;
   padding: 0 20px;
   margin: 10px auto 0px;
-  height: 54vh;
+  height: 430px;
   background: var(--color5);
   overflow: hidden;
 }
 .iframe {
-  width: 100%;
-  height: 65vh;
+  width: 380px;
+  height: 640px;
   padding-top: 0;
-  transform-origin: 50% top;
-  transform: scale(0.8);
+  transform-origin: -10% top;
+  transform: scale(0.7);
+}
+@media screen and (min-width: 768px) {
+  .formulario {
+    width: 600px;
+    height: 500px;
+  }
+  .iframe {
+    transform: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 600px;
+  }
+  .title {
+    margin: 0 auto 30px;
+  }
+  .formulario {
+    margin: 10px 0 0px 20px;
+    width: 400px;
+    height: 480px;
+  }
+  .iframe {
+    width: 470px;
+    height: 570px;
+    transform-origin: -10% top;
+    transform: scale(0.8);
+  }
+  .label {
+    font-size: 16px;
+    padding: 2px;
+  }
+  .btn {
+    font-size: 18px;
+  }
 }

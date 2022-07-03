@@ -1,13 +1,9 @@
 .container_ec {
   padding: 20px 0;
 }
-.groups {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px auto;
-  overflow: hidden;
+.volver {
+  margin-left: 15px;
 }
-
 .producto {
   display: flex;
   flex-wrap: wrap;
@@ -15,13 +11,14 @@
   align-items: flex-start;
   background: linear-gradient(180deg, #04bf9d, #027368);
   margin: 25px auto 0;
-  width: 94vw;
+  width: clamp(275px, 94vw, 550px);
   height: fit-content;
   padding: 5px 10px;
 }
+
 span {
-  font-size: 80%;
-  padding: 15px 2px;
+  font-size: 13px;
+  margin: 0px 4px;
   color: yellow;
   font-weight: bolder;
 }
@@ -32,6 +29,10 @@ span {
   width: 90%;
   text-align: center;
 }
+div.title_ec {
+  width: fit-content;
+  padding: 15px;
+}
 
 .imagen_producto {
   width: 150px;
@@ -40,15 +41,16 @@ p.precio_producto {
   font-size: 1rem;
   font-weight: bolder;
 }
-form {
+
+.descripcion {
+  width: 55%;
+}
+.formulario {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: fit-content;
-}
-.descripcion {
-  width: 55%;
 }
 .nroItems {
   outline: 2px solid var(--color6);
@@ -76,10 +78,18 @@ p {
   text-align: left;
   margin: 15px 10px 5px;
 }
+.container_sugerencias {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .sugerencias {
-  width: 75vw;
+  width: clamp(210px, 75vw, 245px);
   align-items: center;
   margin: 5px auto 10px;
+  height: auto;
+  cursor: pointer;
 }
 .imagen_otro_producto {
   width: 80px;
@@ -101,4 +111,51 @@ p {
 }
 .p_otros {
   color: white;
+}
+@media screen and (min-width: 768px) {
+  span {
+    font-size: 15px;
+  }
+
+  .title_ec {
+    font-size: 36px;
+  }
+
+  .imagen_producto {
+    width: 200px;
+  }
+  p.precio_producto {
+    font-size: 24px;
+  }
+
+  .descripcion {
+    width: 55%;
+  }
+
+  .btn_ec {
+    font-size: calc(16px + 1.2vw);
+    padding: 4px 12px;
+  }
+
+  p {
+    font-size: 18px;
+    padding: 5px 2px;
+  }
+  .imagen_otro_producto {
+    width: 100px;
+  }
+  .title_otros {
+    font-size: 22px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  p.precio_producto {
+    font-size: 22px;
+  }
+
+  .btn_ec {
+    font-size: calc(12px + 1vw);
+    padding: 4px 12px;
+  }
 }

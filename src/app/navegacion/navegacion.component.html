@@ -20,14 +20,36 @@
         ><img class="img" src="assets/img/contacto.svg" />Contacto</a
       >
     </li>
-    <li class="item" (click)="cambiarTema('open', caja)">
+    <li class="item" (click)="cambiarTema('open')">
       <a class="a_item"><img class="img" src="assets/img/temas.svg" />Temas</a>
     </li>
   </ul>
+  <div
+    class="tema_default box"
+    (click)="cambiarTema('azul')"
+    [class.select_theme]="selColor"
+  >
+    Azul
+  </div>
+  <div
+    class="tema_rojo box"
+    (click)="cambiarTema('rojo')"
+    [class.select_theme]="selColor"
+  >
+    Rojo
+  </div>
+  <div
+    class="tema_verde box"
+    (click)="cambiarTema('verde')"
+    [class.select_theme]="selColor"
+  >
+    Verde
+  </div>
+  <div
+    class="tema_gris box"
+    (click)="cambiarTema('gris')"
+    [class.select_theme]="selColor"
+  >
+    Gris
+  </div>
 </nav>
-<div class="box box_temas" #caja>
-  <div class="tema_default box" (click)="cambiarTema('azul', caja)"></div>
-  <div class="tema_rojo box" (click)="cambiarTema('rojo', caja)"></div>
-  <div class="tema_verde box" (click)="cambiarTema('verde', caja)"></div>
-  <div class="tema_gris box" (click)="cambiarTema('gris', caja)"></div>
-</div>

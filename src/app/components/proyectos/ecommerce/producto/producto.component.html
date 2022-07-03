@@ -1,6 +1,6 @@
 <app-header-ecommerce></app-header-ecommerce>
 <section class="container_ec">
-  <a class="btn_ec box" [routerLink]="['/proyectos', 'ecommerce', '']"
+  <a class="btn_ec box volver" [routerLink]="['/proyectos', 'ecommerce', '']"
     >Volver</a
   >
   <div class="producto box">
@@ -23,7 +23,7 @@
     </figure>
     <div class="descripcion">
       <p *ngFor="let i of producto.descripcion">- {{ i }}</p>
-      <form>
+      <form class="formulario">
         <button type="button" (click)="nroPedidos('-')" class="btn_ec box">
           -
         </button>
@@ -42,8 +42,9 @@
       </form>
     </div>
   </div>
+  <div class="popup_ec title_ec box" *ngIf="popup">Producto Agregado</div>
 
-  <div>
+  <div class="container_sugerencias">
     <h2 class="title_ec otros_productos">Otros productos:</h2>
     <figure
       class="producto box sugerencias"

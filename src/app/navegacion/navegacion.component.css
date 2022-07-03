@@ -12,10 +12,11 @@
 }
 
 .item {
-  width: 10vw;
+  width: clamp(32px, 10vw, 50px);
   height: fit-content;
-  margin: 1vw 0;
+  margin: 0.5vw 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .a_item {
@@ -29,8 +30,8 @@
 
 .img {
   display: inline-flex;
-  width: 10vw;
-  height: 10vw;
+  width: clamp(32px, 10vw, 50px);
+  height: clamp(32px, 10vw, 50px);
   border-radius: 50%;
   background-color: var(--color5);
   margin: 0 3px 0 0;
@@ -43,7 +44,7 @@
 }
 @keyframes slide {
   0% {
-    width: 10vw;
+    width: clamp(32px, 10vw, 50px);
     background-color: var(--color5);
   }
   50% {
@@ -61,36 +62,121 @@
   }
 }
 
-.box_temas {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 26vw;
-  position: absolute;
-  right: 20px;
-  top: 15vw;
-  background: var(--color4);
-  z-index: 89;
-}
-
 .tema_default,
 .tema_gris,
 .tema_rojo,
 .tema_verde {
-  width: 10vw;
-  height: 10vw;
-  margin: 3px;
+  display: none;
+  border-radius: 50%;
+  color: transparent;
+  z-index: 89;
+}
+.select_theme {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  animation: moveIt 1s ease-in-out forwards;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform-origin: center center;
 }
 .tema_default {
   background-color: #003567;
+  top: 56px;
+  right: 157px;
 }
 .tema_rojo {
   background-color: #761622;
+  top: 114px;
+  right: 133px;
 }
 .tema_verde {
   background-color: #356600;
+  top: 158px;
+  right: 89px;
 }
 
 .tema_gris {
   background-color: #708090;
+  top: 181px;
+  right: 31px;
+}
+@keyframes moveIt {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  .item {
+    width: fit-content;
+    margin: 0.5vw 3px;
+    padding: 5px;
+  }
+  .lista {
+    font-size: 13px;
+    height: 70px;
+    padding: 0;
+  }
+  .item:hover {
+    animation: none;
+    background: var(--color5);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.55) 1.2px 1.2px 1.6px;
+  }
+  .item:active {
+    animation: none;
+    box-shadow: inset rgba(0, 0, 0, 0.55) 1.2px 1.2px 1.6px;
+  }
+  .tema_default {
+    top: 98px;
+    right: 294px;
+  }
+  .tema_rojo {
+    top: 206px;
+    right: 249px;
+  }
+  .tema_verde {
+    top: 289px;
+    right: 167px;
+  }
+
+  .tema_gris {
+    top: 334px;
+    right: 58px;
+  }
+  .select_theme {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .a_item {
+    font-size: 16px;
+  }
+  .item {
+    padding: 0;
+  }
+  .lista {
+    height: fit-content;
+    padding: 0 10vw;
+  }
+  .img {
+    width: 40px;
+    height: 40px;
+  }
+  .select_theme {
+    width: 80px;
+    height: 80px;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { LocalStorageService } from '../local-storage.service';
 import { TemasService } from '../temas.service';
 
@@ -8,6 +8,7 @@ import { TemasService } from '../temas.service';
   styleUrls: ['./navegacion.component.css'],
 })
 export class NavegacionComponent implements OnInit {
+  selColor: boolean = false;
   constructor(
     private service: TemasService,
     private cargarTheme: LocalStorageService
@@ -18,11 +19,11 @@ export class NavegacionComponent implements OnInit {
     this.service.cambiarTemas(color);
   }
 
-  cambiarTema(valor: string, elemento: HTMLDivElement) {
+  cambiarTema(valor: string) {
     if (valor == 'open') {
-      elemento.style.display = 'flex';
+      this.selColor = !this.selColor;
     } else {
-      elemento.style.display = 'none';
+      this.selColor = !this.selColor;
       this.service.cambiarTemas(valor);
     }
   }
