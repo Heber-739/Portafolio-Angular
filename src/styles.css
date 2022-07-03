@@ -53,7 +53,7 @@ p {
   width: 95%;
   margin: 0 auto;
   padding: 0 0 10px;
-  font-size: calc(11px +1vw);
+  font-size: calc(11px + 1vw);
   text-indent: 10px;
 }
 .title {
@@ -210,9 +210,6 @@ p {
     font-size: 18px;
   }
 
-  .container p {
-    font-size: calc(11px +1vw);
-  }
   .title {
     font-size: 68px;
   }
