@@ -132,7 +132,7 @@ p {
   border: 2px solid var(--color5);
   z-index: 10;
 }
-.ng-invalid.ng-dirty {
+input.ng-invalid.ng-dirty {
   border: 1px solid red;
   outline: 1px solid red;
 }

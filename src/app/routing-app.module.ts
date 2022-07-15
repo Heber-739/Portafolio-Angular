@@ -12,6 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PreloadModuleService } from './preload-module.service';
 import { LocalStorageService } from './local-storage.service';
 import { TemasService } from './temas.service';
+import { FirebaseService } from './firebase.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRouts: Routes = [
   { path: '', component: HomeComponent },
@@ -61,8 +63,9 @@ const appRouts: Routes = [
     RouterModule.forRoot(appRouts, {
       preloadingStrategy: PreloadModuleService,
     }),
+    HttpClientModule,
   ],
   exports: [RouterModule],
-  providers: [LocalStorageService, TemasService],
+  providers: [LocalStorageService, TemasService, FirebaseService],
 })
 export class RoutingAppModule {}

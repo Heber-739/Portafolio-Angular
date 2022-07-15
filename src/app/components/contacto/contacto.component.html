@@ -16,42 +16,38 @@
       <p>Para un contacto formal, hacerlo aquí:</p>
     </div>
     <div class="contact_content">
-      <form class="form">
+      <form
+        class="form"
+        [formGroup]="emailForm"
+        (keydown.enter)="$event.preventDefault()"
+      >
         <label for="name" class="label">Nombre:</label>
         <input
           name="name"
           class="input_text name"
-          required
           type="text"
           autocomplete="off"
           placeholder="Ingrese su nombre"
+          formControlName="nombre"
+        />
+        <label for="mail" class="label">Correo:</label>
+        <input
+          name="mail"
+          class="input_text correo"
+          type="text"
+          autocomplete="off"
+          placeholder="Ingrese su correo"
+          formControlName="correo"
         />
         <label for="message" class="label">Mensaje:</label>
         <textarea
           class="input_text mensaje"
           name="message"
-          placeholder="Este mensaje se enviará desde su aplicación de mail predeterminada."
+          placeholder="Escribeme un mensaje positivo."
+          formControlName="mensaje"
         ></textarea>
-        <button type="submit" class="btn">Enviar</button>
+        <button type="submit" class="btn" (click)="send()">Enviar</button>
       </form>
-
-      <a
-        href="mailto:heberduarteryr@gmail.com"
-        class="email"
-        target="_blank"
-      ></a>
     </div>
   </section>
-
-  <aside class="box formulario">
-    <iframe
-      class="iframe"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfs54np7seY-GAINjTFrVWYth-wcRS77Htbp2kVA78JsgvEKw/viewform?embedded=true"
-      width="640"
-      height="530"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-    ></iframe>
-  </aside>
 </main>
